@@ -7,4 +7,5 @@ Este site visa servir de base de documentação e repositório para a lingua por
 Troca de serviços mais comuns como Blogger (defasado) e Wordpress (muito complicado) por um sistema fácil de gerenciar.
 
 ### O que é Bludit CMS?
-Bludit é um sistema para criação de site e blogs contendo vários plugins e temas gratuitos. Suporte multilinguas.
+Bludit é um sistema para criação de site e blogs contendo vários plugins e temas gratuitos, além de suporte multilinguas.
+Ele se destaca por não necessitar de banco de dados, isto é, os dados são disponibilizados em arquivos. É ideal para médios e pequenos sites e blogs.
