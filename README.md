@@ -15,3 +15,5 @@ Foi concebido otimizado para os mecanismos de pesquisa e redes sociais.
 
 ## Por que da escolha?
 CMS (gerenciamento de conteúdo) bom, com possibilidade de expansão, e altamente customizável. O usuário pode baixá-lo, instalá-lo e depois personalizá-lo, necessitando apenas de um tempo para [aprender como funciona](https://docs.bludit.com/) . Esse projeto irá ajudá-lo a entender o funcionamento.
+
+What does it mean?
