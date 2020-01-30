@@ -1,4 +1,4 @@
-# [Bludit CMS](https://www.bludit.com/) Portugues
+# [Bludit CMS](https://www.bludit.com/) em Língua Portuguesa
 
 ## Sobre
 Este site visa servir de base de documentação e repositório em lingua portuguesa para o Bludit CMS.
