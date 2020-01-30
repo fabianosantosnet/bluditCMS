@@ -1,7 +1,8 @@
-# Bem vindo ao meu site referente ao [Bludit CMS](https://www.bludit.com/)
+# [Bludit CMS](https://www.bludit.com/) Portugues
 
 ## Sobre
-Este site visa servir de base de documentação e repositório para a lingua portuguesa para o CMS Bludit.
+Este site visa servir de base de documentação e repositório em lingua portuguesa para o Bludit CMS.
+Será disponibilizado customizações dos plugins, indicação dos mesmos, organizá-los, além disso informar sobre temas.
 
 ## Motivação
 Troca de serviços mais comuns como Blogger (defasado) e Wordpress (muito complicado) por um sistema fácil de gerenciar.
