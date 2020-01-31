@@ -1,0 +1,65 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+
+body {font-family:arial, helvetica,sans-serif;font-size:14px;color:#444;background-color:#fff}
+
+.parent {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-columns:22% auto;
+grid-template-rows: repeat(5, 1fr);
+grid-template-rows:180px auto auto 100px;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+max-width:1100px;
+margin:5px auto;
+padding:0px
+}
+
+a {color:darkblue}
+a:hover {color:darkorange}
+
+.top { grid-area: 1 / 1 / 2 / 3;border-bottom:10px inset #e9967a;
+      background-color:antiquewhite}
+
+.top h1 {margin-top:-140px;margin-left:190px;text-transform:uppercase}
+.top h1 a {text-decoration:none;color:brown}
+.top img {width:120px;padding:10px;border-radius:100px;margin:10px 30px;
+          background:linear-gradient(90deg, #d53369 0%, #daae51 100%);}
+.top p {margin-top:0px;margin-left:190px;font-family:serif;color:brown}
+
+.menu { grid-area: 2 / 1 / 4 / 2;padding-top:50px;background-color:#e9967a}
+.menu > div {margin-top:20px}
+.menu h2 {background-color:antiquewhite;padding:5px;
+        font-size:16px;color:darksalmon}
+
+.menu ul {list-style:none;padding:5px;width:90%}
+.menu ul li {padding:5px 10px;border-bottom:1px inset antiquewhite} 
+.menu ul li a {text-decoration:none;font-weight:bold;width:100%;
+  display:inline-block;color:antiquewhite}
+
+.menu ul li a:hover {color:#fff;width:100%;}
+.menu ul li:hover {}
+.menu ul li:last-of-type {border-bottom:0}
+
+.content {grid-area: 2 / 2 / 4 / 3;padding:10px;margin:30px 0px 30px 50px;clear:both}
+
+
+.content h1 {background-color:darksalmon;padding:10px;font-size:24px;
+            text-transform:uppercase;color:#fff;
+            margin:-20px -10px 0 -10px;
+            border-top:20px outset antiquewhite
+}
+
+.content h2 {padding:10px;font-size:18px;font-family:serif;
+color:darkgray;border-left:10px outset antiquewhite;margin-top:30px;
+  border-bottom:1px inset antiquewhite;background:url('line2.png') #f5f5f5}
+.content p {color:#777;background:#fff;padding:5px 10px}
+
+.content h3 {}
+.content h4 {}
+
+
+.bottom { grid-area: 4 / 1 / 5 / 3;border-top:10px outset #e9967a;
+  text-align:right;padding:10px 40px 0 0;height:100px;
+background-color:antiquewhite;color:brown}
+.bottom a {}
