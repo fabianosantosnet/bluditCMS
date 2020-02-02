@@ -48,18 +48,6 @@
 			<li><a href="./index.html"><i class="fas fa-home"></i> Principal</a></li>
 		</ul>
 		</div>
-
-		<div class="links">
-		 <h2>Links oficiais do BluditCMS</h2>
-		  <ul>
-			<li><a href="https://www.facebook.com/bluditcms"><i class="fab fa-facebook-square"></i> Facebook</a></li>
-			<li><a href="https://twitter.com/bludit/"><i class="fab fa-twitter-square"></i> Twitter</a></li>
-			<li><a href="https://github.com/bludit/bludit"><i class="fab fa-github-square"></i> GitHub</a></li>
-			<li><a href="https://gitter.im/bludit/support"><i class="fab fa-gitter"></i> Gitter</a></li>
-			<li><a href="https://forum.bludit.org/"><i class="fab fa-forumbee"></i> Fórum</a></li>
-			<li><a href="https://bludit-showcase.com/"><i class="fas fa-eye"></i> Showcase</a></li>
-		  </ul>
-		</div>
 	</div>
 
 	<div class="content">
@@ -67,7 +55,10 @@
 		<h2 id="bludit-cms-em-língua-portuguesa">Bludit CMS | Instalação</h2>
 
 		<h3>Requerimentos e Preparação do Ambiente</h3>
-		<p>Antes de tudo, é necessário preparar um servidor web com PHP 5.6 ou superior e os módulos PHP <a href="https://www.php.net/manual/en/book.mbstring.php">mbstring</a>, <a href="https://www.php.net/manual/en/book.image.php">gd</a>, <a href="https://www.php.net/manual/en/book.dom.php">dom</a>, <a href="https://www.php.net/manual/en/book.json.php">json</a> <a name="#" title="php*-mbstring php*-gd php*-xml php*-json libapache2-mod-php php-mcrypt">[see]</a>. <p><b>Não é necessário banco de dados !</b></p>
+		<p>Antes de tudo, é necessário preparar um servidor web com PHP 5.6 ou superior e os módulos PHP <a href="https://www.php.net/manual/en/book.mbstring.php">mbstring</a>, <a href="https://www.php.net/manual/en/book.image.php">gd</a>, <a href="https://www.php.net/manual/en/book.dom.php">dom</a>, <a href="https://www.php.net/manual/en/book.json.php">json</a>. No linux seria como: <small><code>php*-mbstring php*-gd php*-xml php*-json libapache2-mod-php php-mcrypt</code> </small> onde no lugar do '*' é a versão do PHP.
+
+		<p><b>Não é necessário banco de dados !</b></p>
+
 		<p>Bludit pode ser usado em quase todos webservers:</p>
 		<ul>
 		<li><a href="https://www.php.net/manual/en/features.commandline.webserver.php">PHP Built-in web server</a></li>
@@ -85,25 +76,23 @@
 		<h4>Pacotes</h4>
 		<p>Caso prefira instaladores com tudo junto pode-se usar os WAMPs/LAMPs:</p>
 		<ol>
-		<li><em>WAMP (Windows, Apache, MySQL, PHP):</em> <a href="https://www.vswamp.com/">Vertrigo Serv</a>, <a href="http://www.wampserver.com/en/">WAMPServer</a> (desinstale/não instale o banco);</li>
+		<li><em>WAMP (Windows, Apache, MySQL, PHP):</em> <a href="https://www.vswamp.com/">Vertrigo Serv</a>, <a href="http://www.wampserver.com/en/">WAMPServer</a> (desinstale/não instale o banco), <a href="https://www.apachefriends.org/pt_br/index.html" title="Disponível para Windows e Linux">XAMPP</a>;</li>
 		<li><em>LAMP (Linux, Apache, MySQL, PHP):</em> Veja o artigo de <a href="https://www.edivaldobrito.com.br/instale-lamp-no-linux-e-tenha-um-servidor-web-em-seu-pc/">servidor web no Ubuntu/Debian</a> ou mais customizado no <a href="https://howtoubuntu.org/how-to-install-lamp-on-ubuntu">Ubuntu</a> (ignore o passo 2).</li>
 		</ol>
-
-
-
 
 		<h3>Instalação do Bludit</h3>
 		<p>Nessa seção será reunida informações diversas de instalação do Bludit em diversas plataformas.</p>
 		<h4>Documentação oficial</h4>
-		<p><a href="https://docs.bludit.com/en/getting-started/installation-guide">Instrução de instalação da documentação oficial (en)</a></p>
+		<p>Conforme <a href="https://docs.bludit.com/en/getting-started/installation-guide">instrução de instalação da documentação oficial (en)</a>, após efetuar o <a href="https://www.bludit.com/">download no site oficial</a>, extraia na pasta de seu webserver, em seguida, abra via browser o caminho <em>http://localhost/</em>, para execução local na pasta raiz, ou <em>http://localhost/bludit/</em> caso tenha extraido na pasta bludit. Substitua localhost pelo nome de domínio adequado.</p>
+
 		<h4>Via CPANEL</h4>
 		<p>Data do artigo:  08/2016 - <a href="https://ajuda.minas.com.br/hospedagem-de-sites/cpanel/softaculous/instalar-o-bludit-via-softaculous/">Como instalar utilizando o Softaculous</a></p>
-		<h4>Linux</h4>
+		<p>Para hospedagem, se preferir faça o <a href="https://www.bludit.com/">upload do arquivo zipado</a> na pasta public folder via gerenciador de arquivos (filemanager) ou FTP, extraia na pasta desejada ou na raiz, e depois acesse pelo navegador a url <em>http://nomedosite/install.php</em> ou <em>http://nomedosite/nomeDaPasta/install.php</em>.</p>
+
+		<h4>Outros</h4>
 		<p>Data do artigo:  12/2016 -  <a href="https://sempreupdate.com.br/instalar-bludit-cms-no-ubuntu-debian/">Instalar no Debian e Derivados</a></p>
-		<h4>Windows</h4>
-		<p></p>
-		<!--		<img src="assets/home/bludit-content.png" alt="Bludit CMS edição" class="imghomecontent">
-		--></section>
+
+		</section>
 		</div>
 
 	<div class="bottom">
