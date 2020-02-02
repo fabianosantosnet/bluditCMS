@@ -11,7 +11,7 @@ if(window.location.href.indexOf('videos.html') != -1) //prevent script running a
 
 	  // Based on the YouTube ID, we can easily find the thumbnail image
 	  var img = document.createElement("img");
-	  img.setAttribute("src", "http://i.ytimg.com/vi/" + youtube.id + "/hqdefault.jpg");
+	  img.setAttribute("src", "https://i.ytimg.com/vi/" + youtube.id + "/hqdefault.jpg");
 	  img.setAttribute("class", "videoy-thumb");
 
 	  // Overlay the Play icon to make it look like a video player
