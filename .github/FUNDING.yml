@@ -1,3 +1,2 @@
 # Suporte este projeto
-
-Paypal: "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Z3EAJK47GMXCU&currency_code=BRL&source=url"
+custom: ["https://www.paypal.me/octocat", octocat.com]
