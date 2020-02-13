@@ -19,14 +19,6 @@ Suporta Markdown e HTML, além disso possui editor Markdown e WYSIWYG.
 ## Por que da escolha?
 CMS (gerenciamento de conteúdo) bom, com possibilidade de expansão, e altamente customizável. O usuário pode baixá-lo, instalá-lo e depois personalizá-lo, necessitando apenas de um tempo para [aprender como funciona](https://docs.bludit.com/) . Esse projeto irá ajudá-lo a entender o funcionamento.
 
-Veja mais detalhes no [site](https://fabianosantosnet.github.io/bluditCMS/).
+Veja mais detalhes no [site](https://fabianosantosnet.github.io/bluditCMS/). Caso tenha interesse em ajudar [aceito doações](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Z3EAJK47GMXCU&currency_code=BRL&source=url).
 
-## Doar
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_donations" />
-<input type="hidden" name="business" value="Z3EAJK47GMXCU" />
-<input type="hidden" name="currency_code" value="BRL" />
-<input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Faça doações com o botão do PayPal" />
-<img alt="" border="0" src="https://www.paypal.com/pt_BR/i/scr/pixel.gif" width="1" height="1" />
-</form>
 
