@@ -59,10 +59,9 @@
 
 		<h4>Visão Geral</h4>
 
-		<p>O Bludit é o novo CMS desenvolvido por Diego Najar (Argentino) sendo o sucessor do descontinuado NibbleBlog. Sua primeira versão estável <em>v0.1 Wood</em> foi lançada em Setembro de 2015 e o logotipo foi desenhado pelo Português <a href="https://twitter.com/syndicatefx">Paulo Nunes @syndicatefx</a>. Atualmente o Bludit está na versão <em>3.11 Pizza Time</em> e possui diversos recursos implementados. Com ele é possível criar tanto um site quanto um blog.</p>
-		<p> O CMS foi projetado para armazenar os dados em arquivos JSON ao invés de banco de dados, além de deixar o projeto mais leve, ajuda na segurança.</p>
-		<p>Entendendo um pouco do funcionamento do sistema, pode ser desenvolvido temas e plugins personalizados utilizando qualquer framework e linguagem uma vez que o Bludit requer que seja hospedado em um servidor com PHP e alguns módulos.</p>
-
+<p>O Bludit é o novo <abbr title="Content Management System - Sistema de Gestão de Conteúdo">CMS</abbr> desenvolvido pelo Argentino <a href="https://varlogdiego.com">Diego Najar</a> sendo o sucessor do descontinuado NibbleBlog. Sua primeira versão estável <em>v0.1 Wood</em> foi lançada em Setembro de 2015 e o logotipo foi desenhado pelo Português <a href="https://twitter.com/syndicatefx">Paulo Nunes</a>. Atualmente o Bludit está na versão <em>3.11 Pizza Time</em> e possui diversos recursos implementados como interface de administração amigável, editor com suporte a <span title="Liguagem que converte seu texto em HTML válido">MarkDown</span>,  <abbr title="Do Inglês 'Hypertext Markup Language' traduzido para 'Linguagem de Marcação de Hipertexto'">HTML</abbr> (ou modo visual <abbr title="Do inglês 'What You See Is What You Get' e quer dizer 'O que você vê é o que você obtém'">WYSIWYG</abbr>),além de também ser aderente à <em>Lei de Proteção de Dados</em>. Com ele é possível criar tanto um site quanto um blog.</p>
+<p>O CMS foi projetado para armazenar os dados em arquivos JSON ao invés de banco de dados, contrubuindo assim para um projeto mais leve e seguro.</p>
+<p>Entendendo um pouco do funcionamento do sistema, pode ser desenvolvido temas e plugins personalizados utilizando qualquer framework, uma vez que o Bludit requer que seja hospedado em um servidor com PHP e alguns módulos.</p>
 
 		<h4>Screenshots</h4>
 		<p>Estes prints foram tirados da instalação do Bludit 3.11.</p>
@@ -133,7 +132,71 @@
 		</div>
 
 
-		<h4>DEV: Temas e Plugins</h4>
+		<h4>DEV - Informações para Desenvolvedores PHP</h4>
+
+<p>O Bludit quase não possui recursos externos, usa apenas <a href="https://jquery.com/">JQuery</a>, <a href="https://getbootstrap.com/">Bootstrap</a> e para fontes a <a href="https://icons8.com/line-awesome">Line Awesome</a>. Os temas e plugins podem ser criados com qualquer framework PHP.</p>
+
+<h5>Estrutura de diretório</h5>
+<p>Saiba como está estruturado o CMS</p>
+
+<code class="minilight">/bl-content/    &lt;-- Base de dados e imagens enviadas
+/bl-kernel/     &lt;-- Coração do Bludit
+/bl-languages/  &lt;-- Contém os arquivos de idioma em formato JSON codificados em UTF8.
+/bl-plugins/    &lt;-- Extensões
+/bl-themes/     &lt;-- Temas</code>
+
+
+<p>Detalhes da pasta de conteúdo</p>
+<code class="minilight">/bl-content/
+
+    databases/		&lt;-- Contém arquivos em PHP, porém contendo informações no formato JSON
+
+        plugins/        &lt;-- Plugins (contém pastas com formato'NomeDoPlugin/db.php'
+	                             ao qual o dado do plugin é armazenado no arquivo
+				     com a extensão PHP, porém dentro em formato JSON
+
+        categories.php  &lt;-- JSON das categorias criadas com a lista de artigos a ela pertencentes
+        pages.php       &lt;-- Contém o arquivo JSON de metadados das páginas
+        security.php    &lt;-- Configuração de lista negra, proteção de força bruta dentre outros
+        site.php        &lt;-- Informações gerais do site definidas no Painel do Bludit em Ajustes-&gt;Geral
+        syslog.php      &lt;-- Contém informações em formato JSON dos eventos do CMS
+        tags.php        &lt;-- Tags criadas
+        users.php       &lt;-- Detalhes dos usuários criados
+
+    pages/              &lt;-- Conteúdo de todas páginas
+
+			    Basicamente apresenta o padrão nomeDoArtigo/index.txt
+			    ao qual os dados são gravados no index.txt.
+
+			    Caso tenha uma página filha terá o seguinte formato
+			    nomeDoArtigoPai/nomePaginaFilha/index.txt
+
+			    Arquivos salvos automaticamente terão o formato
+			    autosave-231101474a25a99d4e4fe2bd8c536916 (isto é autosave-hash)
+        about/index.txt
+        food/index.txt
+
+    thumbs/		&lt;-- Thumbs
+	pages/
+	profiles/
+	thumbnails/
+
+    tmp/                &lt;-- Arquivos temporários
+
+    uploads/            &lt;-- Arquivos enviados
+        pages/
+        profiles/       &lt;-- Imagens dos perfis
+        thumbnails/     &lt;-- Imagens Thumbnails
+        photo1.jpg
+        photo2.png
+
+    workspaces/         &lt;-- Espaço de trabalho para os plugins (extensões)
+</code>
+
+<p><small>https://docs.bludit.com/en/developers/folder-structure</small></p>
+
+<h5>Hooks</h5>
+
 		<p>O sistema disponibiliza os chamados <a href="https://docs.bludit.com/en/plugins/hooks-list">ganchos</a>, que são funções prestabelecidas ao qual são sobrescritas nos plugins ou temas e são invocados diretamente no tema.</p>
 
 		<p>No exemplo abaixo as funções serão automaticamente executadas nesses 3 locais de um template (tema) fictício: <em>siteHead</em> (dentro da tag head), <em>siteBodyBegin</em> (logo após a tag body) e <em>siteBodyEnd</em> (antes do término da tag body). Isso significa que todos plugins ativos que implementem o gancho será chamado naquele determinado local.</p>
@@ -168,7 +231,6 @@
     $objCat=new pluginCategories();
     echo $objCat-&#x3E;siteSidebar();
 ?&#x3E;</code>
-
 	      </section>
 	</div>
 
