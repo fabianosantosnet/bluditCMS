@@ -44,7 +44,7 @@ window.onload=function(){
 	      }
 	}
 
-	if(window.location.href.indexOf('func.html') != -1)
+	if(window.location.href.indexOf('prints.html') != -1)
 	{
 		var imgz    = document.getElementsByClassName("z");
 		var showimg = document.getElementById('showimg');
@@ -72,7 +72,7 @@ window.onload=function(){
   			    showimg.style="position:fixed;left:"+$perc+"%;top:25%;border:1px double red;box-shadow:-1px 1px 3px #000;padding:10px;background-color:#eee;overflow:auto;max-width:70%;max-height:60%";
 
 
-		          showimg.insertAdjacentHTML('afterbegin','Zoom - Imagem "'+this.alt+'" <small>Clique para sair</small><br><br>');
+		          showimg.insertAdjacentHTML('afterbegin','Zoom - Imagem "'+this.alt+'" <small>Clique nessa imagem sair</small><br><br>');
 			  showimg.onclick=function() {this.removeChild(simg);this.innerHTML='';this.style='';}
 		      showimg.appendChild(simg);
 		  }
