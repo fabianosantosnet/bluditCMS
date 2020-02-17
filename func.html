@@ -65,20 +65,24 @@
 
 		<h4>DEV - Informações para Desenvolvedores PHP</h4>
 
-<p>O Bludit quase não possui recursos externos, usa apenas <a href="https://jquery.com/">JQuery</a>, <a href="https://getbootstrap.com/">Bootstrap</a> e para fontes a <a href="https://icons8.com/line-awesome">Line Awesome</a>. Os temas e plugins podem ser criados com qualquer framework PHP.</p>
+		<p>O Bludit quase não possui recursos externos, usa apenas <a href="https://jquery.com/">JQuery</a>, <a href="https://getbootstrap.com/">Bootstrap</a> e para fontes a <a href="https://icons8.com/line-awesome">Line Awesome</a>. Os temas e plugins podem ser criados com qualquer framework PHP.</p>
 
-<h5>Estrutura de diretório</h5>
-<p>Saiba como está estruturado o CMS</p>
+		<h5>Estrutura de diretório</h5>
+		<p>Saiba como está estruturado o CMS</p>
 
-<code class="minilight">/bl-content/    &lt;-- Base de dados e imagens enviadas
+		<code class="minilight">/bl-content/    &lt;-- Base de dados e imagens enviadas
 /bl-kernel/     &lt;-- Coração do Bludit
-/bl-languages/  &lt;-- Contém os arquivos de idioma em formato JSON codificados em UTF8
+/bl-languages/  &lt;-- Contém os arquivos de idioma em formato JSON codificados em UTF8.
+                    São arquivos a nível global do Bludit, isto é, traduzem o CMS.
+                    Para o portugues do Brasil temos o pt_BR.json. Estudando as chaves,
+		    você pode colocar também as traduções em seus plugins e temas.
+
 /bl-plugins/    &lt;-- Extensões
 /bl-themes/     &lt;-- Temas</code>
 
 
-<p>Detalhes da pasta de conteúdo</p>
-<code class="minilight">/bl-content/
+		<p>Detalhes da pasta de conteúdo</p>
+		<code class="minilight">/bl-content/
 
     databases/		&lt;-- Contém arquivos em PHP, porém contendo informações no formato JSON
 
@@ -102,8 +106,9 @@
 			    Caso tenha uma página filha terá o seguinte formato
 			    nomeDoArtigoPai/nomePaginaFilha/index.txt
 
-			    Arquivos salvos automaticamente terão o formato
+			    Arquivos salvos automaticamente sem nome terão o formato
 			    autosave-231101474a25a99d4e4fe2bd8c536916 (isto é autosave-hash)
+			    e com nome será nomeArtigo-autosave-XXXXXXXXX (onde 'X' é a hash)
         about/index.txt
         food/index.txt
 
@@ -124,9 +129,176 @@
     workspaces/         &lt;-- Espaço de trabalho para os plugins (extensões)
 </code>
 
-<p><small>https://docs.bludit.com/en/developers/folder-structure</small></p>
+		<p>Detalhes da pasta kernel</p>
 
-<h5>Hooks</h5>
+		<code class="minilight">/bl-kernel/
+
+    js/					  &lt;-- Arquivos de Javascript e Libs, também encapsulados no PHP
+      variables.php			  &lt;-- Variáveis globais impressas para serem utilizadas no JS
+      select2.full.min.js		  &lt;-- Extensão JQuery para caixas de seleções [select2.org]
+      jstz.min.js			  &lt;-- Biblioteca Javascript para timezone
+      jquery.sortable.min.js		  &lt;-- Extensão JQuery para ordenar elementos numa lista ou
+                                              grid usando o mouse [jqueryui.com/sortable/]
+
+      jquery.min.js			  &lt;-- Framework Javascript JQuery v3.4.1
+      jquery.datetimepicker.full.min.js	  &lt;-- Extensão JQuery para seleção de hora e data
+
+      functions.js			  &lt;-- Funções para limpeza do HTML e manupular cookie
+      bootstrap.bundle.min.js		  &lt;-- Funções do Framework CSS Bootstrap v4.4.1
+      bludit-ajax.php                     &lt;-- Classe JS bluditAjax encapsulada no PHP
+
+    img/				  &lt;-- Imagens: default, logo e ícone
+
+    helpers/
+      valid.class.php			  &lt;-- Classe Valid que contém alguns métodos de validação
+
+      theme.class.php			  &lt;-- Classe Theme para trabalhar com tema contendo título,
+					      meta tags, slogan, descrição, linguagem e etc
+
+      text.class.php
+      tcp.class.php
+      session.class.php
+      sanitize.class.php
+      redirect.class.php
+      paginator.class.php
+      log.class.php
+      image.class.php
+      filesystem.class.php
+      email.class.php
+      dom.class.php
+      date.class.php
+      cookie.class.php
+      alert.class.php
+
+    css/			          &lt;-- Arquivos CSS dos plugins e frameworks do CMS
+
+    boot/
+      rules/
+         99.themes.php
+         99.security.php
+         99.paginator.php
+         99.header.php
+         69.pages.php
+         60.router.php
+         60.plugins.php
+
+      variables.php
+      site.php
+      init.php
+      admin.php
+
+    ajax/
+      upload-images.php
+      save-as-draft.php
+      profile-picture-upload.php
+      logo-upload.php
+      logo-remove.php
+      list-images.php
+      get-published.php
+      generate-slug.php
+      delete-image.php
+      content-get-list.php
+      clippy.php
+
+    admin/
+      views/
+         users.php
+         user-password.php
+         themes.php
+         settings.php
+         plugins-position.php
+         plugins.php
+         new-user.php
+         new-content.php
+         new-category.php
+         login.php
+         edit-user.php
+         edit-content.php
+         edit-category.php
+         developers.php
+         dashboard.php
+         content.php
+         configure-plugin.php
+         categories.php
+         blocks.php
+         about.php
+
+      themes/			          &lt;-- Temas para o painel de administração
+         booty/
+	    html/
+	       sidebar.php
+	       navbar.php
+	       media.php
+	       alert.php
+
+	    css/
+   	       bludit.css
+	       bludit.bootstrap.css
+
+	    login.php
+	    init.php
+	    index.php
+
+      controllers/
+         users.php
+         user-password.php
+         uninstall-plugin.php
+         themes.php
+         settings.php
+         plugins-position.php
+         plugins.php
+         new-user.php
+         new-content.php
+         new-category.php
+         logout.php
+         login.php
+         install-theme.php
+         install-plugin.php
+         edit-user.php
+         edit-content.php
+         edit-category.php
+         developers.php
+         dashboard.php
+         content.php
+         configure-plugin.php
+         categories.php
+         api.php
+         about.php
+
+    abstract/
+      plugin.class.php
+      dblist.class.php
+      dbjson.class.php
+
+    users.class.php         &lt;-- Classe Users que herda a classe dbJSON utilizada para manipular
+			        diversos usuários
+
+    user.class.php          &lt;-- Classe User para manipular um usuário
+    url.class.php           &lt;-- Classe Url que contém informações de http, página não encontrada e etc
+    tags.class.php          &lt;-- Classe Tags que herda a classe dbList para tratar diversas tags
+    tag.class.php           &lt;-- Classe Tag para trabalho com uma tag
+    syslog.class.php        &lt;-- Classe Syslog que herda dbJSON para manipulação de eventos do sistema
+
+    site.class.php          &lt;-- Classe Site que herda dbJSON e retorna diversas informações do site
+    security.class.php      &lt;-- Classe Security que herda dbJSON para tratar de segurança
+    parsedown.class.php     &lt;-- Classe externa Parsedown para manipulação do MarkDown [parsedown.org]
+    pagex.class.php         &lt;-- Classe Page que retorna diversas informações da página
+    pages.class.php         &lt;-- Classe Pages que herda dbJSON para manipular dados no banco JSON
+    login.class.php         &lt;-- Classe Login utilizada para tratar de sessões e cookies
+
+    language.class.php      &lt;-- Classe Language que herda dbJSON para tratar de idioma,
+				localização, data e hora
+
+    functions.php           &lt;-- Diversas funções internas para criar página, reindexar banco etc
+    category.class.php      &lt;-- Classe Category contendo informações de uma categoria
+    categories.class.php    &lt;-- Classe Categories que herda dbList para manipular várias categorias
+</code>
+
+<br><p>As pastas bl-themes e bl-plugins não tem um padrão, e portanto serão explanados em página separada.</p>
+
+		<p><small>https://docs.bludit.com/en/developers/folder-structure</small></p>
+
+		<h5>Hooks</h5>
 
 		<p>O sistema disponibiliza os chamados <a href="https://docs.bludit.com/en/plugins/hooks-list">ganchos</a>, que são funções prestabelecidas ao qual são sobrescritas nos plugins ou temas e são invocados diretamente no tema.</p>
 
