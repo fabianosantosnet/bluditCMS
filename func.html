@@ -50,7 +50,7 @@
 	</div>
 
 	<div class="content">
-	      <section>
+	    <section>
 
 	      <h2>Bludit CMS | Funcionamento</h2>
 
@@ -59,13 +59,19 @@
 
 		<h4>Visão Geral</h4>
 
-<p>O Bludit é o novo <abbr title="Content Management System - Sistema de Gestão de Conteúdo">CMS</abbr> desenvolvido pelo Argentino <a href="https://varlogdiego.com">Diego Najar</a> sendo o sucessor do descontinuado NibbleBlog. Sua primeira versão estável <em>v0.1 Wood</em> foi lançada em Setembro de 2015 e o logotipo foi desenhado pelo Português <a href="https://twitter.com/syndicatefx">Paulo Nunes</a>. Atualmente o Bludit está na versão <em>3.11 Pizza Time</em> e possui diversos recursos implementados como interface de administração amigável, editor com suporte a <span title="Liguagem que converte seu texto em HTML válido">MarkDown</span>,  <abbr title="Do Inglês 'Hypertext Markup Language' traduzido para 'Linguagem de Marcação de Hipertexto'">HTML</abbr> (ou modo visual <abbr title="Do inglês 'What You See Is What You Get' e quer dizer 'O que você vê é o que você obtém'">WYSIWYG</abbr>),além de também ser aderente à <em>Lei de Proteção de Dados</em>. Com ele é possível criar tanto um site quanto um blog.</p>
-<p>O CMS foi projetado para armazenar os dados em arquivos JSON ao invés de banco de dados, contrubuindo assim para um projeto mais leve e seguro.</p>
-<p>Entendendo um pouco do funcionamento do sistema, pode ser desenvolvido temas e plugins personalizados utilizando qualquer framework, uma vez que o Bludit requer que seja hospedado em um servidor com PHP e alguns módulos.</p>
+<p>O Bludit é o novo <abbr title="Content Management System - Sistema de Gestão de Conteúdo">CMS</abbr> desenvolvido pelo Argentino <a href="https://varlogdiego.com">Diego Najar</a> sendo o sucessor do descontinuado NibbleBlog. Sua primeira versão estável <em>v0.1 Wood</em> foi lançada em Setembro de 2015 e o logotipo foi desenhado pelo Português <a href="https://twitter.com/syndicatefx">Paulo Nunes</a>. Atualmente o Bludit está na versão <em>3.11 Pizza Time</em> e possui diversos recursos implementados como interface de administração amigável, editor com suporte a <span title="Liguagem que converte seu texto em HTML válido">MarkDown</span>,  <abbr title="Do Inglês 'Hypertext Markup Language' traduzido para 'Linguagem de Marcação de Hipertexto'">HTML</abbr> (ou modo visual <abbr title="Do inglês 'What You See Is What You Get' e quer dizer 'O que você vê é o que você obtém'">WYSIWYG</abbr>), além de também ser aderente à <em>Lei de Proteção de Dados</em>. Com ele é possível criar tanto um site quanto um blog pessoal ou profissional.</p>
+		<p>O CMS foi projetado para armazenar as páginas do site no formato TXT e os arquivos de configuração no formato JSON ao invés de banco de dados, contribuindo assim para um projeto mais leve, seguro (pois poucos o exploraram) e de fácil manutenção.</p>
+			
+		<p>O Bludit implementa o recurso de múltiplos idiomas, utilizando alguns arquivos de configurações padrões em formato JSON, o desenvolvedor pode personalizar seu template disponibilizando no idioma inglês e português, por exemplo.</p>
+		<p>Para integração com outros sistemas o CMS ainda implementa uma API ao qual o desenvolvedor pode requisitar e atualizar dados de páginas e tags.</p>
+
+<p>Entendendo um pouco do funcionamento do sistema, pode ser desenvolvido <span title="templates">temas</span> e <span title="plugins">extensões</span> personalizados utilizando qualquer framework, uma vez que o Bludit requer que seja hospedado em um servidor com PHP e alguns módulos.</p>
 
 		<h4>DEV - Informações para Desenvolvedores PHP</h4>
 
 		<p>O Bludit quase não possui recursos externos, usa apenas <a href="https://jquery.com/">JQuery</a>, <a href="https://getbootstrap.com/">Bootstrap</a> e para fontes a <a href="https://icons8.com/line-awesome">Line Awesome</a>. Os temas e plugins podem ser criados com qualquer framework PHP.</p>
+
+			<p>O sistema não utiliza engines de templates como Twing, prefere o uso do PHP puro, deixando a cargo do desenvolvedor escolher a ferramenta que lhe convier.</p>
 
 		<h5>Estrutura de diretório</h5>
 		<p>Saiba como está estruturado o CMS</p>
@@ -112,7 +118,7 @@
         about/index.txt
         food/index.txt
 
-    thumbs/		&lt;-- Thumbs
+    thumbs/		&lt;-- Miniaturas
 	pages/
 	profiles/
 	thumbnails/
@@ -159,8 +165,8 @@
       tcp.class.php 			  &lt;-- Classe TCP que implementa 3 métodos: http, Download e getIP
       session.class.php 		  &lt;-- Específica para trabalho com sessões
       sanitize.class.php		  &lt;-- Alguns métodos de remoção e conversão de caracteres
-      redirect.class.php
-      paginator.class.php
+      redirect.class.php		  &lt;-- Implementa métodos de redirecionamento
+      paginator.class.php		
       log.class.php
       image.class.php
       filesystem.class.php
@@ -324,7 +330,7 @@
 
 		<p class="note">Lembre-se que nem todo plugin ou tema conterá esses hooks (ganchos). Trata-se um padrão do CMS que o desenvolvedor poderá ou não implementar em seu projeto.</p>
 
-<p>No exemplo abaixo, você poderia colocar o código na lateral da página para chamar o <em>siteSidebar</em>. Ele retorna todos plugins ativados que tenham o método <em>siteSidebar</em> implementado e ordenados conforme URL <em>https://EnderecoDoSite<b>/admin/plugins-position</b></em> (ou encontrado no painel de administração do bludit em Plugins->Alterar as posições dos plugins.</p>
+<p>No exemplo abaixo, você poderia colocar o código na lateral da página para chamar o <em>siteSidebar</em>. Ele retorna todos plugins ativados que tenham o método <em>siteSidebar</em> implementado e ordenados conforme URL <em>https://EnderecoDoSite<b>/admin/plugins-position</b></em> (ou encontrado no painel de administração do Bludit em Plugins-&gt;Alterar as posições dos plugins).</p>
 
 		<code class="minilight">&#x3C;?php Theme::plugins(&#x27;siteSidebar&#x27;) ?&#x3E;</code>
 
