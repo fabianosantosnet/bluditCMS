@@ -54,9 +54,42 @@
 		<section>
 		<h2 id="bludit-cms-em-língua-portuguesa">Bludit CMS | Plugins</h2>
 
-		<h3>O que são as plugins no Bludit e quais as mais comuns ?</h3>
+		<h3>O que são os plugins no Bludit e quais os mais comuns ?</h3>
       <p>Plugins são extensões de funcionalidades criadas tanto pelos desenvolvedores do Bludit quanto terceiros.</p>
-      <p>Essa função é localizada em <em>Ajustes-&gt;Plugins</em> no Painel de Administração do Bludit. Você irá ver uma listagem dos <a href="assets/img/bludit-pt-br_v3.11/adjust/bludit-adjust-plugins.png" target="_blank" title="Abre em nova janela">plugins disponíveis</a>, podendo ou nao ativá-los.</p>
+      <p>Essa função é localizada em <em>Ajustes-&gt;Plugins</em> no Painel de Administração do Bludit.</p>
+	  <p>O CMS por padrão deixa ativo poucos plugins. O usuário pode ativá-los e desativá-lo conforme a necessidade e também carregar outros plugins para a pasta <em>bl-plugins</em>. </p>
+		  
+		<p>Clique na imagem para ver a lista de plugins padrões.</p>  
+		<div class="zoomimg">
+			<div id="showimg"></div>
+			<div class="z1">		  
+				<img src="assets/img/bludit-pt-br_v3.11/adjust/bludit-adjust-plugins.png" alt="Ajustes - Plugins" class="z">				
+			</div>
+		</div>
+			
+		<h4>Estrutura de diretório</h4>
+		<p>Pasta dos plugins</p>
+			
+	  <code class="minilight">  /bl-plugins/                          &lt;-- Contem todos os plugins
+		                            Novas extensões devem ser carregadas nessa pasta
+		  
+    pastaNomePlugin1/               	&lt;-- Nome da pasta do plugin
+		  
+	        languages/              &lt;-- Implementa os arquivos de idioma do plugin 
+			  en.json
+			  ...
+			  ja_JP.json 
+		  
+	        metadata.json           &lt;-- Descreve informações do plugin
+	        plugin.php              &lt;-- Classe com padrão plugin'NomePlugin' que herda a classe Plugin e 
+		                            contém todas informações programáveis do plugin
+		  
+    pastaNomePlugin2/		  
+		  ...
+    pastaNomePlugin3/		  
+		  ...		  
+	  </code>
+			
       <p>...</p>
 		</section>
 		</div>

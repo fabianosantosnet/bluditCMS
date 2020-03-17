@@ -65,7 +65,7 @@
 		<p>O Bludit implementa o recurso de múltiplos idiomas, utilizando alguns arquivos de configurações padrões em formato JSON, o desenvolvedor pode personalizar seu template disponibilizando no idioma inglês e português, por exemplo.</p>
 		<p>Para integração com outros sistemas o CMS ainda implementa uma API ao qual o desenvolvedor pode requisitar e atualizar dados de páginas e tags.</p>
 
-<p>Entendendo um pouco do funcionamento do sistema, pode ser desenvolvido <span title="templates">temas</span> e <span title="plugins">extensões</span> personalizados utilizando qualquer framework, uma vez que o Bludit requer que seja hospedado em um servidor com PHP e alguns módulos.</p>
+<p>Entendendo um pouco do funcionamento do sistema, pode ser desenvolvido <span title="templates">temas</span> e <span title="plugins">extensões</span> personalizadas utilizando qualquer framework, uma vez que o Bludit requer que seja hospedado em um servidor com PHP e alguns módulos.</p>
 
 		<h4>DEV - Informações para Desenvolvedores PHP</h4>
 
@@ -178,25 +178,33 @@
 
     css/			          &lt;-- Arquivos CSS dos plugins e frameworks do CMS
 
-    boot/
-      rules/
-         99.themes.php
-         99.security.php
-         99.paginator.php
-         99.header.php
-         69.pages.php
-         60.router.php
-         60.plugins.php
+    boot/			          &lt;-- Contém arquivos básicos e configurações do CMS
+			
+      init.php				  &lt;-- Define constantes e inclusão de arquivos
+      admin.php				  &lt;-- Lógica para usuários logados e não logados
+      site.php				  &lt;-- Carrega os plugins, inclui arquivos e define o tema
+      variables.php			  &lt;-- Implementa as variáveis de ambiente
 
-      variables.php
-      site.php
-      init.php
-      admin.php
+      rules/				  &lt;-- Define as regras do CMS
+			
+         99.themes.php		          &lt;-- Carrega os arquivos de configuração do template e o idioma
+         99.security.php	          &lt;-- Informação de segurança referente ao token
+         99.paginator.php	          &lt;-- Seta as configurações iniciais de paginação
+         99.header.php	          	  &lt;-- Define informações de cabeçalho do CMS
+			
+         69.pages.php	          	  &lt;-- Define as coleções globais $content, $staticContent ($staticPages)
+					      sendo que cada uma implementa uma lista de objetos do tipo Page. 
+					   
+					      Também a variável $page tendo o valor de $content[0].
+			
+         60.router.php	          	  &lt;-- Implementa logica de redirecionamento de algumas seções
+         60.plugins.php	          	  &lt;-- Define o array $plugins e inicializa os hooks (ganhos) 
+					      e implementa a função de criação de plugins
 
     ajax/
-      upload-images.php
-      save-as-draft.php
-      profile-picture-upload.php
+      upload-images.php			  &lt;-- Carrega uma imagem para uma página particular
+      save-as-draft.php			  &lt;-- Cria/edita uma página e salva como rascunho
+      profile-picture-upload.php	  &lt;-- Carrega uma imagem para o perfil do usuário
       logo-upload.php
       logo-remove.php
       list-images.php
