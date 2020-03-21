@@ -44,7 +44,7 @@ window.onload=function(){
 	      }
 	}
 
-	if(window.location.href.indexOf('prints.html') != -1 || window.location.href.indexOf('plugins.html') != -1)
+	if(window.location.href.indexOf('prints.html') != -1 || window.location.href.indexOf('plugins.html') != -1 || window.location.href.indexOf('themes.html') != -1)
 	{
 		var imgz    = document.getElementsByClassName("z");
 		var showimg = document.getElementById('showimg');

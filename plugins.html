@@ -37,7 +37,7 @@
       	        <img src="assets/logo.png" alt="Logo">
 		<h1><a href="https://fabianosantosnet.github.io/bluditCMS/">Bludit CMS</a></h1>
 		<p>Informações referente ao Bludit CMS em lingua portuguesa</p>
-		<p class="view"><a href="https://github.com/fabianosantosnet/bluditCMS">GitHub deste site</a> (não editável)</p><!-- https://git.fabianosantos.net -->
+		<p class="view"><a href="https://github.com/fabianosantosnet/bluditCMS">GitHub deste site</a></p><!-- https://git.fabianosantos.net -->
 	      </header>
 	</div>
 
@@ -57,7 +57,7 @@
 		<h3>O que são os plugins no Bludit e quais os mais comuns ?</h3>
       <p>Plugins são extensões de funcionalidades criadas tanto pelos desenvolvedores do Bludit quanto terceiros.</p>
       <p>Essa função é localizada em <em>Ajustes-&gt;Plugins</em> no Painel de Administração do Bludit.</p>
-	  <p>O CMS por padrão deixa ativo poucos plugins. O usuário pode ativá-los e desativá-lo conforme a necessidade e também carregar outros plugins para a pasta <em>bl-plugins</em>. </p>
+	  <p>O CMS por padrão deixa ativo poucos plugins. O usuário pode ativá-los ou desativá-los conforme a necessidade, e também carregar outros plugins na pasta <em>bl-plugins</em>. O download pode ser efetuado na página de <a href="https://plugins.bludit.com/">plugins do Bludit</a>.</p>
 		  
 		<p>Clique na imagem para ver a lista de plugins padrões.</p>  
 		<div class="zoomimg">
@@ -68,6 +68,7 @@
 		</div>
 			
 		<h4>Estrutura de diretório</h4>
+
 		<p>Pasta dos plugins</p>
 			
 	  <code class="minilight">  /bl-plugins/                          &lt;-- Contem todos os plugins
@@ -76,9 +77,12 @@
     pastaNomePlugin1/               	&lt;-- Nome da pasta do plugin
 		  
 	        languages/              &lt;-- Implementa os arquivos de idioma do plugin 
-			  en.json
+		  		      	    O desenvolvedor pode criar uma ou mais versões de tradução
+		  		      	    
+		  
+			  en.json	&lt;-- Arquivo de tradução inglesa
 			  ...
-			  ja_JP.json 
+			  ja_JP.json 	&lt;-- Tradução japonesa do plugin
 		  
 	        metadata.json           &lt;-- Descreve informações do plugin
 	        plugin.php              &lt;-- Classe com padrão plugin'NomePlugin' que herda a classe Plugin e 
