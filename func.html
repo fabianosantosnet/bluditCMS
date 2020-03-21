@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 
-<title>Bludit CMS em Língua Portuguesa | Videos</title>
+<title>Bludit CMS em Língua Portuguesa | Funcionamento</title>
 
 <meta property="og:title" content="Funcionamento do Bludit CMS" />
 <meta property="og:locale" content="pt_BR" />
@@ -205,17 +205,25 @@
       upload-images.php			  &lt;-- Carrega uma imagem para uma página particular
       save-as-draft.php			  &lt;-- Cria/edita uma página e salva como rascunho
       profile-picture-upload.php	  &lt;-- Carrega uma imagem para o perfil do usuário
-      logo-upload.php
-      logo-remove.php
-      list-images.php
-      get-published.php
-      generate-slug.php
-      delete-image.php
-      content-get-list.php
-      clippy.php
+      logo-upload.php	 		  &lt;-- Carrega o logotipo do site/blog
+      logo-remove.php	 		  &lt;-- Remove o logotipo do site/blog
+      list-images.php	 		  &lt;-- Retorna uma lista de imagens de uma página particular
+			
+      get-published.php	 		  &lt;-- Retorna a lista de páginas publicadas 
+		   			      buscadas pelo título do artigo
+			
+      generate-slug.php 		  &lt;-- Gera um texto slug para uma URL
+      delete-image.php 		  	  &lt;-- Apaga a imagem de uma página particular
+			
+      content-get-list.php 		  &lt;-- Busca por páginas que tenham no título o texto pesquisado 
+		  			      e retorna uma coleção de páginas
+			
+      clippy.php 		  	  &lt;-- Retorna uma coleção de dados dependendo da busca
 
-    admin/
-      views/
+    admin/ 		  	  	  &lt;-- Páginas de administração de Bludit
+			
+      views/	
+			
          users.php
          user-password.php
          themes.php
@@ -238,7 +246,9 @@
          about.php
 
       themes/			          &lt;-- Temas para o painel de administração
+			
          booty/
+			
 	    html/
 	       sidebar.php
 	       navbar.php
@@ -253,7 +263,8 @@
 	    init.php
 	    index.php
 
-      controllers/
+      controllers/			  &lt;-- Define o fluxo de controle
+			
          users.php
          user-password.php
          uninstall-plugin.php
@@ -279,10 +290,14 @@
          api.php
          about.php
 
-    abstract/
-      plugin.class.php
-      dblist.class.php
-      dbjson.class.php
+    abstract/			  	&lt;-- Define classes importantes do sistema
+			
+      plugin.class.php			&lt;-- Classe Plugin utilizada para extensões do sistema
+      dblist.class.php			&lt;-- Classe dbList herda a dbJSON para manipulação do 'Banco JSON'
+      dbjson.class.php			&lt;-- Classe dbJSON que implementa métodos como ler, salvar, 
+				    	    e efetuar o backup do JSON
+			
+			
 
     users.class.php         &lt;-- Classe Users que herda a classe dbJSON utilizada para manipular
 			        diversos usuários
