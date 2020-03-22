@@ -54,7 +54,7 @@
 		<section>
 		<h2 id="bludit-cms-em-língua-portuguesa">Bludit CMS | Plugins</h2>
 
-		<h3>O que são os plugins no Bludit e quais os mais comuns ?</h3>
+		<h3>Informações diversas sobre as extensões e seu desenvolvimento</h3>
       <p>Plugins são extensões de funcionalidades criadas tanto pelos desenvolvedores do Bludit quanto terceiros.</p>
       <p>Essa função é localizada em <em>Ajustes-&gt;Plugins</em> no Painel de Administração do Bludit.</p>
 	  <p>O CMS por padrão deixa ativo poucos plugins. O usuário pode ativá-los ou desativá-los conforme a necessidade, e também carregar outros plugins na pasta <em>bl-plugins</em>. O download pode ser efetuado na página de <a href="https://plugins.bludit.com/">plugins do Bludit</a>.</p>
@@ -94,7 +94,101 @@
 		  ...		  
 	  </code>
 			
-      <p>...</p>
+	<h4>Informações de Desenvolvimento</h4>		
+
+      <p>Nessa primeira introdução iremos analisar o plugin que insere a informação sobre o site ou pessoa na lateral da página.</p>
+
+	<p>O arquivo metadata.json apresenta algumas informações sobre o plugin, porém o que aparece na página de plugins são: a versão e o autor com o link da página.</p>			
+		<code class="minilight">{
+	"author": "Bludit",
+	"email": "",
+	"website": "https://plugins.bludit.com",
+	"version": "3.10.0",
+	"releaseDate": "2019-10-19",
+	"license": "MIT",
+	"compatible": "3.10.0",
+	"notes": ""
+}</code>
+
+		
+	<p>O arquivo na pasta en.json, por exemplo, localizado dentro da pasta languages, apresenta a descrição sobre o plugin que aparece na página de plugins. O arquivo apresenta a chave "plugin-data" (nome que não deve ser alterado) que engloba os dois pares name e description.</p>
+		<code class="minilight">{
+	"plugin-data":
+	{
+		"name": "About",
+		"description": "Show a small description of your site or about yourself."
+	}
+}</code>
+			
+	<p>Caso queira adicionar mais traduções apenas adicione outra virgula e insira conforme exemplo abaixo.</p>
+		<code class="minilight">{
+	"plugin-data":
+	{ 
+	   ...
+	},
+	"chave1": "info chave1",
+	"chave2": "info chave2",
+	...
+}</code>		
+			
+		<p>Verificando o código do pluginAbout abaixo (arquivo plugin.php), temos a noção de alguns padrões:</p>
+		<ul>
+			<li>O plugin o padrão de nome plugin<strong>Nome</strong> nesse caso <strong>Nome</strong> é About ficando pluginAbout que herda da classe Plugin</li>
+			<li>init() - Método padrão para iniciar as propriedades</li>
+			<li>form() - Método padrão que mostrará o conteúdo de configuração do plugin (link Ajustes)</li>				
+			<li>siteSidebar() - Método sobrescrito - chamado de hook, que será chamado se o modelo (template) implementar essa função, esse é o conteúdo que irá aparecer para o usuário quando acessa a página, note também as classes css padrões</li>					
+		</ul>
+			
+<code class="minilight">&lt;?php
+
+class pluginAbout extends Plugin {
+
+&#x9;public function init()
+&#x9;{
+&#x9;&#x9;$this-&#x3E;dbFields = array(
+&#x9;&#x9;&#x9;&#x27;label&#x27;=&#x3E;&#x27;About&#x27;,
+&#x9;&#x9;&#x9;&#x27;text&#x27;=&#x3E;&#x27;&#x27;
+&#x9;&#x9;);
+&#x9;}
+
+&#x9;public function form()
+&#x9;{
+&#x9;&#x9;global $L;
+
+&#x9;&#x9;$html  = &#x27;&#x3C;div class=&#x22;alert alert-primary&#x22; role=&#x22;alert&#x22;&#x3E;&#x27;;
+&#x9;&#x9;$html .= $this-&#x3E;description();
+&#x9;&#x9;$html .= &#x27;&#x3C;/div&#x3E;&#x27;;
+
+&#x9;&#x9;$html .= &#x27;&#x3C;div&#x3E;&#x27;;
+&#x9;&#x9;$html .= &#x27;&#x3C;label&#x3E;&#x27;.$L-&#x3E;get(&#x27;Label&#x27;).&#x27;&#x3C;/label&#x3E;&#x27;;
+&#x9;&#x9;$html .= &#x27;&#x3C;input name=&#x22;label&#x22; type=&#x22;text&#x22; value=&#x22;&#x27;.$this-&#x3E;getValue(&#x27;label&#x27;).&#x27;&#x22;&#x3E;&#x27;;
+&#x9;&#x9;$html .= &#x27;&#x3C;span class=&#x22;tip&#x22;&#x3E;&#x27;.$L-&#x3E;get(&#x27;This title is almost always used in the sidebar'.
+	                 'of the site&#x27;).&#x27;&#x3C;/span&#x3E;&#x27;;
+&#x9;&#x9;$html .= &#x27;&#x3C;/div&#x3E;&#x27;;
+
+&#x9;&#x9;$html .= &#x27;&#x3C;div&#x3E;&#x27;;
+&#x9;&#x9;$html .= &#x27;&#x3C;label&#x3E;&#x27;.$L-&#x3E;get(&#x27;About&#x27;).&#x27;&#x3C;/label&#x3E;&#x27;;
+&#x9;&#x9;$html .= &#x27;&#x3C;textarea name=&#x22;text&#x22; id=&#x22;jstext&#x22;&#x3E;&#x27;.$this-&#x3E;getValue(&#x27;text&#x27;).&#x27;&#x3C;/textarea&#x3E;&#x27;;
+&#x9;&#x9;$html .= &#x27;&#x3C;/div&#x3E;&#x27;;
+
+&#x9;&#x9;return $html;
+&#x9;}
+
+&#x9;public function siteSidebar()
+&#x9;{
+&#x9;&#x9;$html  = &#x27;&#x3C;div class=&#x22;plugin plugin-about&#x22;&#x3E;&#x27;;
+&#x9;&#x9;$html .= &#x27;&#x3C;h2 class=&#x22;plugin-label&#x22;&#x3E;&#x27;.$this-&#x3E;getValue(&#x27;label&#x27;).&#x27;&#x3C;/h2&#x3E;&#x27;;
+&#x9;&#x9;$html .= &#x27;&#x3C;div class=&#x22;plugin-content&#x22;&#x3E;&#x27;;
+&#x9;&#x9;$html .= html_entity_decode(nl2br($this-&#x3E;getValue(&#x27;text&#x27;)));
+ &#x9;&#x9;$html .= &#x27;&#x3C;/div&#x3E;&#x27;;
+ &#x9;&#x9;$html .= &#x27;&#x3C;/div&#x3E;&#x27;;
+
+&#x9;&#x9;return $html;
+&#x9;}
+
+}
+?&gt;</code>	
+			
 		</section>
 		</div>
 
