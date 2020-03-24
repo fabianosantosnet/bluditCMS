@@ -7,37 +7,39 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 
-<title>Bludit CMS em Língua Portuguesa | Plugins</title>
+  <title>Bludit CMS em Língua Portuguesa | Plugins</title>
 
-<meta property="og:title" content="Bludit CMS pt-br - Plugins" />
-<meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="Bludit CMS pt-br - Plugins" />
+  <meta property="og:locale" content="pt_BR" />
 
-<meta name="description" content="Informações referente aos plugins do Bludit CMS" />
-<meta property="og:description" content="Informações referente aos plugins do Bludit CMS" />
+  <meta name="description" content="Informações referente aos plugins do Bludit CMS" />
+  <meta property="og:description" content="Informações referente aos plugins do Bludit CMS" />
 
-<meta property="og:url" content="https://fabianosantosnet.github.io/bluditCMS/" />
-<meta property="og:site_name" content="bluditCMS" />
-<meta name="author" content="https://fabianosantosnet.github.io/bluditCMS/">
+  <meta property="og:url" content="https://fabianosantosnet.github.io/bluditCMS/" />
+  <meta property="og:site_name" content="bluditCMS" />
+  <meta name="author" content="https://fabianosantosnet.github.io/bluditCMS/">
 
-<link rel="canonical" href="https://fabianosantosnet.github.io/bluditCMS/" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
-<link rel="stylesheet" href="assets/styles.css">
+  <link rel="canonical" href="https://fabianosantosnet.github.io/bluditCMS/" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="assets/styles.css">
 
-<script type="application/ld+json">
-{"description":"Informações referente aos plugins do Bludit CMS","@type":"WebSite","url":"https://fabianosantosnet.github.io/bluditCMS/","name":"bluditCMS","headline":"Bludit CMS em Língua Portuguesa","@context":"https://schema.org"}
-</script>
-<script src="assets/scripts.js" defer></script>
+  <script type="application/ld+json">
+    {"description":"Informações referente aos plugins do Bludit CMS","@type":"WebSite","url":"https://fabianosantosnet.github.io/bluditCMS/","name":"bluditCMS","headline":"Bludit CMS em Língua Portuguesa","@context":"https://schema.org"}
+  </script>
+	  
+  <script src="assets/scripts.js" defer></script>
 
   </head>
   <body>
+	  
 <div class="parent">
 
 	<div class="top">
 	      <header>
-      	        <img src="assets/logo.png" alt="Logo">
-		<h1><a href="https://fabianosantosnet.github.io/bluditCMS/">Bludit CMS</a></h1>
-		<p>Informações referente ao Bludit CMS em lingua portuguesa</p>
-		<p class="view"><a href="https://github.com/fabianosantosnet/bluditCMS">GitHub deste site</a></p><!-- https://git.fabianosantos.net -->
+            <img src="assets/logo.png" alt="Logo" />
+            <h1><a href="https://fabianosantosnet.github.io/bluditCMS/">Bludit CMS</a></h1>
+            <p>Informações referente ao Bludit CMS em lingua portuguesa</p>
+            <p class="view"><a href="https://github.com/fabianosantosnet/bluditCMS">GitHub deste site</a></p><!-- https://git.fabianosantos.net -->
 	      </header>
 	</div>
 
@@ -55,9 +57,9 @@
 		<h2 id="bludit-cms-em-língua-portuguesa">Bludit CMS | Plugins</h2>
 
 		<h3>Informações diversas sobre as extensões e seu desenvolvimento</h3>
-      <p>Plugins são extensões de funcionalidades criadas tanto pelos desenvolvedores do Bludit quanto terceiros.</p>
-      <p>Essa função é localizada em <em>Ajustes-&gt;Plugins</em> no Painel de Administração do Bludit.</p>
-	  <p>O CMS por padrão deixa ativo poucos plugins. O usuário pode ativá-los ou desativá-los conforme a necessidade, e também carregar outros plugins na pasta <em>bl-plugins</em>. O download pode ser efetuado na página de <a href="https://plugins.bludit.com/">plugins do Bludit</a>.</p>
+      	<p>Plugins são extensões de funcionalidades criadas tanto pelos desenvolvedores do Bludit quanto terceiros.</p>
+      	<p>Essa função é localizada em <em>Ajustes-&gt;Plugins</em> no Painel de Administração do Bludit.</p>
+	  	<p>O CMS por padrão deixa ativo poucos plugins. O download de outros pode ser efetuado na página de <a href="https://plugins.bludit.com/">plugins do Bludit</a>, e descompactado na pasta <em>bl-plugins</em>. O usuário pode ativá-los ou desativá-los conforme a necessidade.</p>
 		  
 		<p>Clique na imagem para ver a lista de plugins padrões.</p>  
 		<div class="zoomimg">
@@ -120,7 +122,7 @@
 	}
 }</code>
 			
-	<p>Caso queira adicionar mais traduções apenas adicione outra virgula e insira conforme exemplo abaixo.</p>
+	<p>Caso queira adicionar mais traduções apenas adicione outra virgula e insira conforme exemplo abaixo. Depois é só criar o arquivo json com o outro idioma, exemplo um pt_BR.json e outro en.json e efetuar as traduções nos valores das chaves.</p>
 		<code class="minilight">{
 	"plugin-data":
 	{ 
@@ -131,12 +133,14 @@
 	...
 }</code>		
 			
+	<p>Caso queira retornar o valor da "chave1", por exemplo use $L->get('chave1'). O valor será retornado de acordo com o idioma que você deixou padrão no Bludit. O comando $L->get('Label') do exemplo abaixo retorna a chave definida em <em>bl-languages</em>, já que não existe no JSON desse plugin.</p>
+			
 		<p>Verificando o código do pluginAbout abaixo (arquivo plugin.php), temos a noção de alguns padrões:</p>
 		<ul>
 			<li>O plugin o padrão de nome plugin<strong>Nome</strong> nesse caso <strong>Nome</strong> é About ficando pluginAbout que herda da classe Plugin</li>
 			<li>init() - Método padrão para iniciar as propriedades</li>
 			<li>form() - Método padrão que mostrará o conteúdo de configuração do plugin (link Ajustes)</li>				
-			<li>siteSidebar() - Método sobrescrito - chamado de hook, que será chamado se o modelo (template) implementar essa função, esse é o conteúdo que irá aparecer para o usuário quando acessa a página, note também as classes css padrões</li>					
+			<li>siteSidebar() - Método sobrescrito - chamado de <a href="func.html#hook">hook</a>, que será chamado se o modelo (template) implementar essa função, esse é o conteúdo que irá aparecer para o usuário quando acessa a página, note também as classes css padrões</li>					
 		</ul>
 			
 <code class="minilight">&lt;?php
