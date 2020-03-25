@@ -93,16 +93,42 @@
 	        js/              	&lt;-- Pasta para os arquivos javascripts
 		  
 	        php/              	&lt;-- Contém os demais arquivos do site, podendo ser qualquer nome,
-	                         	    no entanto, pode se usar nomes padrões como head.php, home.php etc.
+	                         	    no entanto, pode se usar nomes padrões como home.php, page.php etc.
 		  
-    pastaNomeTema1/		  
+    pastaNomeTema2/		  
 		  ...
-    pastaNomeTema1/		  
+    pastaNomeTema3/		  
 		  ...		  
 	  </code>
 			
-      <p>O ideal é utilizar as pastas padrões pois o Bludit implementa algumas constantes que apontam para estes diretórios. Você pode encontrar essas variáveis em <em>Ajustes-&gt;Sobre-&gt;Bludit Developers</em>.</p>			
-	
+      <p>O ideal é utilizar as pastas padrões pois o Bludit implementa algumas constantes que apontam para estes diretórios. Você pode encontrar essas variáveis em <em>Ajustes-&gt;Sobre-&gt;Bludit Developers</em> no painel de administração.</p>			
+
+      <p>A informação básica sobre o tema deve ser adicionada no arquivo <em>metadata.json</em>, conforme mencionado abaixo. O campo author refere-se a informação de quem criou o tema, releaseDate é a data que foi liberada a versão, descrita na chave version, outras informações podem ser observadas nas chaves: email, website.</p>
+			
+		<code class="minilight">{
+  "author": "nomeAutor",
+  "email": "",
+  "website": "https://sitedoplugin.com",
+  "version": "1.0",
+  "releaseDate": "2018-08-01",
+  "license": "MIT",
+  "compatible": "3.0",
+  "notes": ""
+}</code>			
+			
+	<p>O nome e descrição do tema é disponibilizado em <em>languages/en.json</em> no caso do arquivo de idioma em inglês. A chave "theme-data" não deve ser alterada.</p>
+			
+		<code class="minilight">{
+  "theme-data":
+  {
+    "name": "My New Theme",
+    "description": "My first theme"
+  }
+}</code>
+			
+	<p>Siga a criação das páginas conforme o padrão da pasta <strong>pastaNomeTema1/</strong> mencionada acima. O arquivo index.php e metadata.json logo dentro na pasta <strong>pastaNomeTema1/</strong>, e dentro desta a pasta languages com pelo menos o arquivo en.json (inglês) e uma versão em português pt_BR.json. A disposição dos demais arquivos não é obrigatória.</p>
+	<!-- <p>.</p>
+	<p>.</p>		-->	
 		</section>
 		</div>
 
