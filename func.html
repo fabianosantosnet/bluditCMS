@@ -67,6 +67,69 @@
 
 <p>Entendendo um pouco do funcionamento do sistema, pode ser desenvolvido <span title="templates">temas</span> e <span title="plugins">extensões</span> personalizadas utilizando qualquer framework, uma vez que o Bludit requer que seja hospedado em um servidor com PHP e alguns módulos.</p>
 
+		<h4>Primeiros Passos</h4>
+		<p>Após logar no sistema, você deve configurar o site/blog. Ao término da leitura veja as <a href="prints.html">telas do Bludit CMS</a> para ficar mais claro.</p>
+			
+		<p>Em Ajustes->Geral</p>
+		<ul>
+		<li><em>-&gt;Geral</em><br />Preencha as informações básicas como título do site, slogan<br /><br /></li>
+		<li><em>-&gt;Avançado</em><br />Altere o número de artigos que irá aparecer na página inicial, ordene o conteúdo (data ou posição), insira um email, sete páginas pré-definidas, altere URL da categoria e tag<br /><br /></li>
+		<li><em>-&gt;SEO</em><br />Defina o padrão para os mecanismos de buscas (já otimizada)<br /><br /></li>
+		<li><em>-&gt; Social Networks (Redes Sociais)</em><br />Altere as redes sociais do usuário logado <span id="redes">(Twitter, Facebook, CodePen, Instagram, GitLab, GitHub, LinkedIn, Mastodon, Dribble e VK)</span><br /><br /></li>
+		<li><em>-&gt;Imagens</em><br />Defina a altura, lagura e qualidade das miniaturas das imagens<br /><br /></li>
+		<li><em>-&gt;Idioma</em><br />Altere o idioma, fuso horário, local e formato de data<br /><br /></li>
+		<li><em>-&gt;Custom Fields (Campos Customizados)</em><br>Permite inserir configurações no tema ou plugin do site sem alterar o código - baseada no JSON <a href="https://docs.bludit.com/en/content/custom-fields">veja mais detalhes</a><br /><br /></li>
+		<li><em>-&gt;Logo</em><br />Permite inserir o logo do site</li>
+		</ul>
+			
+		<p>Em Ajustes</p>
+		<ul>
+		<li><em>-&gt;Plugins (Extensões)</em><br>
+			Ative, personalize e desative os plugins listados<br>
+			Eles terão o funcionamento de acordo com a configuração de seu tema<br><br></li>
+		<li><em>-&gt;Temas</em><br>
+			Ative e desative temas<br><br></li>			
+		<li><em>-&gt;Sobre</em><br>
+			Contém algumas informações sobre o Bludit como a versão, codename, uso do disco e um link <em>Bludit Developers</em> que contém detalhes de váriáveis do sistema</li>			
+		</ul>
+			
+		<p>Em Administrar</p>
+		<ul>
+			<li><em>-&gt;Conteúdo</em><br><br>
+				É listado os artigos separados em 6 abas ao qual pode ser editada e deletada:<br><br>
+				&nbsp;&nbsp;&nbsp;- Páginas: padrão quando cria um novo artigo<br>
+				&nbsp;&nbsp;&nbsp;- Estático: página que normalmente é disponbilizada em menu no topo ou rodapé<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com conteúdo padrão como Sobre, Localização, Contato etc.<br><br>
+				
+				&nbsp;&nbsp;&nbsp;- Sticky: quando quer destacar um ou mais artigos para serem mostrados primeiro<br>
+				&nbsp;&nbsp;&nbsp;- Agendado: artigo para ser publicado em determinada data<br><br>
+				
+				&nbsp;&nbsp;&nbsp;- Rascunho: artigo não publicado, sendo editado / criado<br>     
+				&nbsp;&nbsp;&nbsp;- Autosave: conteúdo em edição é gravado nessa pasta sendo atualizado conforme<br><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;configurado em <em>Ajustes-&gt;Geral-&gt;Avançado</em> item <em>autosave. <br>
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O padrão do nome é </em>[Autosave] quando não possui nome, e quando tem é NomeDoArtigo[Autosave]<br><br></li>
+			
+			<li><em>-&gt;Categorias</em><br><br>
+				Nessa parte é mostrado as categorias criadas (normalmente pelo usuário administrador ou com perfil de administrador), e o usuário tem a permissão de ver, criar e editar as categorias<br><br></li>
+			
+			<li><em>-&gt;Usuários</em><br><br>
+				Ao clicar você verifica a lista de usuários criados, qual a função de cada um, se está habilitado, data de registro, email (opcional), nickname (apelido - opcional).
+				Clicando em um usuário existente, há as seguintes abas:<br><br>
+				
+				&nbsp;&nbsp;&nbsp;- Perfil: nome do usuario, função (autor, editor, administrador), email, nickname, primeiro nome, sobrenome<br><br>
+				&nbsp;&nbsp;&nbsp;- Imagem do Perfil: carregue uma imagem do perfil (não encontrado opção de exclusão)<br><br>
+				
+				&nbsp;&nbsp;&nbsp;- Security (Segurança): altere a senha, visualize o token de autenticação,<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exclua o usuário (com ou sem conteúdo) e veja o status<br><br>
+				
+				&nbsp;&nbsp;&nbsp;- Social Network (Redes Sociais): define as mesmas redes <a href="#redes">mencionadas acima</a><br><br>
+				
+				Na adição de um novo usuário é definido um nome de usuário, senha, email e função sendo: Autor (pode escrever e editar conteúdo próprio), Editor (Pode escrever e editar o conteúdo dele e de outros) e o Administrador possui todas as permissões (incluindo alterar tema e plugins)</li>
+
+		</ul>
+						
 		<h4>DEV - Informações para Desenvolvedores PHP</h4>
 
 		<p>O Bludit quase não possui recursos externos, usa apenas <a href="https://jquery.com/">JQuery</a>, <a href="https://getbootstrap.com/">Bootstrap</a> e para fontes a <a href="https://icons8.com/line-awesome">Line Awesome</a>. Os temas e plugins podem ser criados com qualquer framework PHP.</p>
