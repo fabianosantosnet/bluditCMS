@@ -1,0 +1,25 @@
+/* Font copyright at https://fonts.google.com/attribution */
+/* only latin */
+@font-face {
+  font-family: 'Cousine';
+  font-style: normal;
+  font-weight: 400;  
+  src: local('Cousine Regular'), local('Cousine-Regular'), url('fonts/Cousine-Regular-Latin.woff2') format('woff2');  
+}
+
+@font-face {
+  font-family:'Inter';
+  font-style: normal;
+  font-weight: 400;  
+  src: url('fonts/Inter-Regular-Latin.woff2') format('woff2');  
+}
+
+@font-face {
+  font-family:'Oxanium';
+  font-style: normal;
+  font-weight: 400; 
+  src: local('Oxanium Regular'), local('Oxanium-Regular'), url('fonts/Oxanium-Regular-Latin.woff2') format('woff2');  
+}
+
+
+ 
