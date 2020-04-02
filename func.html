@@ -3,30 +3,30 @@
 <html lang="pt">
 <head>
 
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
 
-<title>Bludit CMS em Língua Portuguesa | Funcionamento</title>
+  <title>Bludit CMS em Língua Portuguesa | Funcionamento</title>
 
-<meta property="og:title" content="Funcionamento do Bludit CMS" />
-<meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="Funcionamento do Bludit CMS" />
+  <meta property="og:locale" content="pt_BR" />
+ 
+  <meta name="description" content="Funcionamento referente ao Bludit CMS" />
+  <meta property="og:description" content="Funcionamento referente ao Bludit CMS" />
 
-<meta name="description" content="Funcionamento referente ao Bludit CMS" />
-<meta property="og:description" content="Funcionamento referente ao Bludit CMS" />
+  <meta property="og:url" content="https://fabianosantosnet.github.io/bluditCMS/" />
+  <meta property="og:site_name" content="bluditCMS" />
+  <meta name="author" content="https://fabianosantosnet.github.io/bluditCMS/" />
 
-<meta property="og:url" content="https://fabianosantosnet.github.io/bluditCMS/" />
-<meta property="og:site_name" content="bluditCMS" />
-<meta name="author" content="https://fabianosantosnet.github.io/bluditCMS/">
+  <link rel="canonical" href="https://fabianosantosnet.github.io/bluditCMS/" />
+  <link rel="stylesheet" href="assets/styles.css" />  
 
-<link rel="canonical" href="https://fabianosantosnet.github.io/bluditCMS/" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
-<link rel="stylesheet" href="assets/styles.css">
-
-<script type="application/ld+json">
-{"description":"Funcionamento referente ao Bludit CMS","@type":"WebSite","url":"https://fabianosantosnet.github.io/bluditCMS/","name":"bluditCMS","headline":"Funcionamento do Bludit CMS em Língua Portuguesa","@context":"https://schema.org"}
-</script>
-<script src="assets/scripts.js" defer></script>
+  <script type="application/ld+json">
+  {"description":"Funcionamento referente ao Bludit CMS","@type":"WebSite","url":"https://fabianosantosnet.github.io/bluditCMS/","name":"bluditCMS","headline":"Funcionamento do Bludit CMS em Língua Portuguesa","@context":"https://schema.org"}
+  </script>
+	
+  <script src="assets/scripts.js" defer></script>
 
   </head>
   <body>
@@ -59,7 +59,7 @@
 
 		<h4>Visão Geral</h4>
 
-<p>O Bludit é o novo <abbr title="Content Management System - Sistema de Gestão de Conteúdo">CMS</abbr> desenvolvido pelo Argentino <a href="https://varlogdiego.com">Diego Najar</a> sendo o sucessor do descontinuado NibbleBlog. Sua primeira versão estável <em>v0.1 Wood</em> foi lançada em Setembro de 2015 e o logotipo foi desenhado pelo Português <a href="https://twitter.com/syndicatefx">Paulo Nunes</a>. Atualmente o Bludit está na versão <em>Bludit v3.12.0 "Handwashing"</em> e possui diversos recursos implementados como interface de administração amigável, editor com suporte a <span title="Liguagem que converte seu texto em HTML válido">MarkDown</span>,  <abbr title="Do Inglês 'Hypertext Markup Language' traduzido para 'Linguagem de Marcação de Hipertexto'">HTML</abbr> (ou modo visual <abbr title="Do inglês 'What You See Is What You Get' e quer dizer 'O que você vê é o que você obtém'">WYSIWYG</abbr>), além de também ser aderente à <em>Lei de Proteção de Dados</em>. Com ele é possível criar tanto um site quanto um blog pessoal ou profissional.</p>
+<p>O Bludit é o novo <abbr title="Content Management System - Sistema de Gestão de Conteúdo">CMS</abbr> desenvolvido pelo Argentino <a href="https://varlogdiego.com">Diego Najar</a> sendo o sucessor do descontinuado NibbleBlog. Sua primeira versão estável <em>v0.1 Wood</em> foi lançada em Setembro de 2015 e o logotipo foi desenhado pelo Português <a href="https://twitter.com/syndicatefx">Paulo Nunes</a>. O primeiro push do projeto no GitHub foi em 8 de março de 2015, sendo então o marco do nascimento do projeto. Atualmente o Bludit está na versão <em>Bludit v3.12.0 "Handwashing"</em> e possui diversos recursos implementados como interface de administração amigável, editor com suporte a <span title="Liguagem que converte seu texto em HTML válido">MarkDown</span>,  <abbr title="Do Inglês 'Hypertext Markup Language' traduzido para 'Linguagem de Marcação de Hipertexto'">HTML</abbr> (ou modo visual <abbr title="Do inglês 'What You See Is What You Get' e quer dizer 'O que você vê é o que você obtém'">WYSIWYG</abbr>), além de também ser aderente à <em>Lei de Proteção de Dados</em>. Com ele é possível criar tanto um site quanto um blog pessoal ou profissional.</p>
 		<p>O CMS foi projetado para armazenar as páginas do site no formato TXT e os arquivos de configuração no formato JSON ao invés de banco de dados, contribuindo assim para um projeto mais leve, seguro (pois poucos o exploraram) e de fácil manutenção.</p>
 			
 		<p>O Bludit implementa o recurso de múltiplos idiomas, utilizando alguns arquivos de configurações padrões em formato JSON, o desenvolvedor pode personalizar seu template disponibilizando no idioma inglês e português, por exemplo.</p>
@@ -426,6 +426,50 @@
     $objCat=new pluginCategories();
     echo $objCat-&#x3E;siteSidebar();
 ?&#x3E;</code>
+			<br />
+			<h5>Fluxo de carregamento dos arquivos dos Bludit</h5>
+			
+			<p>Quando o site é visitado</p>
+			<code class="minilight">index.php
+    bl-kernel/boot/init.php
+    bl-kernel/boot/site.php
+        bl-kernel/boot/rules/60.plugins.php
+        bl-kernel/boot/rules/69.pages.php
+        bl-kernel/boot/rules/99.header.php
+        bl-kernel/boot/rules/99.paginator.php
+        bl-kernel/boot/rules/99.themes.php
+        bl-kernel/boot/rules/99.security.php
+        bl-themes/{THEME_NAME}/init.php
+        bl-themes/{THEME_NAME}/index.php</code>
+			
+			<p>Quando o painel de Administração é carregado</p>
+			<code class="minilight">index.php
+    bl-kernel/boot/init.php
+    bl-kernel/boot/admin.php
+        bl-kernel/boot/rules/60.plugins.php
+        bl-kernel/boot/rules/69.pages.php
+        bl-kernel/boot/rules/99.header.php
+        bl-kernel/boot/rules/99.paginator.php
+        bl-kernel/boot/rules/99.themes.php
+        bl-kernel/boot/rules/99.security.php
+        bl-kernel/admin/themes/default/init.php
+        bl-kernel/admin/controllers/{CONTROLLER}.php
+        bl-kernel/admin/themes/default/index.php
+            bl-kernel/admin/controllers/{VIEW}.php</code>
+			
+			<br />
+			<h5>Constantes e variáveis de ambiente</h5>
+			
+			<p>No CMS as opções de configurações do sistema podem ser localizadas painel de administração <em>Ajustes-&gt;Sobre-&gt;Bludit Developers</em>. Você verá extensões carregadas, a variável $_SERVER, propriedades de objetos dentre outros.</p>
+	
+			<p>Outras informações<br><small>
+https://docs.bludit.com/en/content/content-basics<br>
+https://docs.bludit.com/en/developers/developers-basics<br>
+https://docs.bludit.com/en/developers/predefined-variables<br>	
+https://github.com/bludit/bludit/blob/master/bl-kernel/boot/init.php<br>
+https://github.com/bludit/bludit/blob/master/bl-kernel/boot/variables.php<br>
+https://github.com/bludit/bludit/blob/master/bl-kernel/boot/rules/69.pages.php				
+			</small></p>
 	      </section>
 	</div>
 

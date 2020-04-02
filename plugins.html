@@ -20,8 +20,7 @@
   <meta name="author" content="https://fabianosantosnet.github.io/bluditCMS/">
 
   <link rel="canonical" href="https://fabianosantosnet.github.io/bluditCMS/">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css" />  
 
   <script type="application/ld+json">
     {"description":"Informações referente aos plugins do Bludit CMS","@type":"WebSite","url":"https://fabianosantosnet.github.io/bluditCMS/","name":"bluditCMS","headline":"Bludit CMS em Língua Portuguesa","@context":"https://schema.org"}
@@ -68,6 +67,67 @@
 				<img src="assets/img/bludit-pt-br_v3.11/adjust/bludit-adjust-plugins.png" alt="Ajustes - Plugins" class="z">				
 			</div>
 		</div>
+			
+			<h4>Extensões pré-instaladas</h4>
+			<p>No Bludit 3.12, as extensões ativas são: </p>
+				<ul>
+					<li>About - clicando em ajustes, coloque o titulo e um texto referente ao conteúdo do blog/site;</li>
+					<li>Canonical - não deve ser desativado, utilizado pelos mecanismos de busca para tratar conteúdo duplicado <a href="https://support.google.com/webmasters/answer/139066">[+]</a>;</li>
+					<li>Robots - usado para informar aos sites de buscas para ignorar ou não uma determinada página, sendo configurado em Opções->SEO->Robots de um artigo <a href="https://www.robotstxt.org/meta.html">[+]</a>;</li>
+					<li>Simple Stats - mostra o número de visitas e visualizações de páginas por dia no seu painel de controle e estatística de conteúdo;</li>
+					<li>TinyMCE - editor padrão do Bludit;</li>
+			</ul>
+
+			<p>As extensões desativadas são: </p>			
+				<ul>					
+					<li>API - interface programável utilizada por desenvolvedores que queriram integrar o CMS em seus projetos;</li>
+					<li>Backup - considere ativar e fazer backups regulares, inclusive salvando em outro servidor;</li>
+					<li>Categories - mostra as categorias na barra lateral;</li>
+					<li>Custom fields parser - defina o código para os campos personalizados e analisa o conteúdo da página;</li>
+					<li>Disqus - ativa o comentário para o artigo (necessário prévio registro no <a href="https://disqus.com/">site</a>);</li>
+					<li>EasyMDE - editor para quem gosta de usar o MarkDown <a href="https://blog.da2k.com.br/2015/02/08/aprenda-markdown/">[+]</a></li>
+					<li>Hit Counter - mostra o número de visitantes únicos do site/blog na lateral da página;</li>
+					<li>HTML Code - adicione código no cabeçalho ou no rodapé da página;</li>
+					<li>Links - visualize links pré configurados na lateral da página;</li>
+					<li>Maintenance mode - coloque o site no modo manutenção e mostre uma mensagem padrão;</li>
+					<li>Navigation - um menu de navegação com subpáginas para a lateral do site/blog (sidebar);</li>
+					<li>Open Graph - protocolo que define alguns padrões para descrição de conteúdo web através das meta tags <a href="https://ogp.me/">[+]</a>;</li>
+					<li>Remote Content - provê um jeito fácil de sincronizar conteúdo do GitHub e similares e sincronizar com o Bludit;</li>
+					<li>RSS Feed - gera um conteúdo feed de seu site com padrão <code>https://seuSite.com.br/<em>rss.xml</em></code>;</li>
+					<li>Search - implementa uma caixa de pesquisa para busca no site/blog;</li>
+					<li>Sitemap - gera um sitemap.xml do site/blog para ser utilizado em mecanismos de busca;</li>
+					<li>Static Pages - menu de navegação com as páginas estáticas criadas;</li>					
+					<li>Tags list - mostra todas as tags no painel lateral (sidebar);</li>
+					<li>Twitter Cards - define pequenos blocos que pode ser disponibilizado fotos, vídeos e tweets ajudando no trafego da sua página web;</li>
+					<li>Version - mostra a versão do Bludit na lateral do painel de administração e informa quando há novas atualizações;</li>
+			</ul>
+			
+			<p>Dica: desative o plugin TinyMCE, e ative os plugins Backup, Categories, Hit Counter, Links, Navigation, RSS Feed, Search, Sitemap, Static Pages e Tags list. Alguns deles são programados, dependendo do tema, para aparecerem em <a href="func.html#hook">determinados locais</a> ou no sidebar (barra lateral), e você pode alterar a posição em  <em>Plugins->Alterar as posições dos plugins</em>. Verifique qual é o mais interessante para o modelo de seu site/blog e desative os que não usar.</p>
+			
+			<h4 id="plgrecommended">Plugins recomendados</h4>
+			
+			<p>Atenção, lembre-se de fazer backup antes de qualquer alteração !</p>
+			
+			<p>Listo alguns plugins interessantes:</p>			
+			<ul>
+				<li>Download plugins - Jeito fácil de fazer o download e instalar plugins (faça o download na página, e coloque dentro da pasta <em>bl-plugins</em>, em seguida ative);</li>
+				<li>Theme Download - lista todos temas disponíveis no site oficial, baixa e instala;</li>
+				<li>Theme Uninstaller - lista os temas instalados, e com um clique exclua;</li>				
+				<li>Extension Manager - Substitui os dois plugins acima, tem a função de baixar, instalar, desinstalar plugins e temas;</li>
+				<li>TinyMCEfileman - plugin customizado com um gerenciador de arquivos, não esqueça de desativar o TinyMCE que vem por padrão;</li>
+				<li>Cachy - gera o cache para as páginas do Bludit;</li>
+				<li>Contact3 - adiciona um formulário de contato em uma página estática com suporte a CAPTCHA, SMTP além de suporte a GDPR;</li>
+				<li>Simple Stats Plus - trata-se de versão melhorada do plugin Simple Stats (também depende dele para funcionar);</li>				
+				<li>Hit Counter Plus - implementa um contador personalizado para o seu projeto, e para funcionar precisa do Simple Stats Plus e Hit Counter ativo;</li>								
+				<li>Snicker - implementa um sistema de comentário próprio com captcha;</li>
+			</ul>		
+			
+			<p>Use os plugins abaixo com cautela</p>
+			<ul>
+				<li>Auto Updater for Bludit 3.X - faz o download e atualiza o CMS com a última versão disponível no site oficial;</li>				
+			</ul>				
+
+para o caso de perda do password https://github.com/bludit/password-recovery-tool<br>
 			
 		<h4>Estrutura de diretório</h4>
 
@@ -192,68 +252,6 @@ class pluginAbout extends Plugin {
 
 }
 ?&gt;</code>	
-			<br />
-			<h4>Extensões pré-instaladas</h4>
-			<p>No Bludit 3.12, as extensões ativas são: </p>
-				<ul>
-					<li>About - clicando em ajustes, coloque o titulo e um texto referente ao conteúdo do blog/site;</li>
-					<li>Canonical - não deve ser desativado, utilizado pelos mecanismos de busca para tratar conteúdo duplicado <a href="https://support.google.com/webmasters/answer/139066">[+]</a>;</li>
-					<li>Robots - usado para informar aos sites de buscas para ignorar ou não uma determinada página, sendo configurado em Opções->SEO->Robots de um artigo <a href="https://www.robotstxt.org/meta.html">[+]</a>;</li>
-					<li>Simple Stats - mostra o número de visitas e visualizações de páginas por dia no seu painel de controle e estatística de conteúdo;</li>
-					<li>TinyMCE - editor padrão do Bludit;</li>
-			</ul>
-
-			<p>As extensões desativadas são: </p>			
-				<ul>					
-					<li>API - interface programável utilizada por desenvolvedores que queriram integrar o CMS em seus projetos;</li>
-					<li>Backup - considere ativar e fazer backups regulares, inclusive salvando em outro servidor;</li>
-					<li>Categories - mostra as categorias na barra lateral;</li>
-					<li>Custom fields parser - defina o código para os campos personalizados e analisa o conteúdo da página;</li>
-					<li>Disqus - ativa o comentário para o artigo (necessário prévio registro no <a href="https://disqus.com/">site</a>);</li>
-					<li>EasyMDE - editor para quem gosta de usar o MarkDown <a href="https://blog.da2k.com.br/2015/02/08/aprenda-markdown/">[+]</a></li>
-					<li>Hit Counter - mostra o número de visitantes únicos do site/blog na lateral da página;</li>
-					<li>HTML Code - adicione código no cabeçalho ou no rodapé da página;</li>
-					<li>Links - visualize links pré configurados na lateral da página;</li>
-					<li>Maintenance mode - coloque o site no modo manutenção e mostre uma mensagem padrão;</li>
-					<li>Navigation - um menu de navegação com subpáginas para a lateral do site/blog (sidebar);</li>
-					<li>Open Graph - protocolo que define alguns padrões para descrição de conteúdo web através das meta tags <a href="https://ogp.me/">[+]</a>;</li>
-					<li>Remote Content - provê um jeito fácil de sincronizar conteúdo do GitHub e similares e sincronizar com o Bludit;</li>
-					<li>RSS Feed - gera um conteúdo feed de seu site com padrão <code>https://seuSite.com.br/<em>rss.xml</em></code>;</li>
-					<li>Search - implementa uma caixa de pesquisa para busca no site/blog;</li>
-					<li>Sitemap - gera um sitemap.xml do site/blog para ser utilizado em mecanismos de busca;</li>
-					<li>Static Pages - menu de navegação com as páginas estáticas criadas;</li>					
-					<li>Tags list - mostra todas as tags no painel lateral (sidebar);</li>
-					<li>Twitter Cards - define pequenos blocos que pode ser disponibilizado fotos, vídeos e tweets ajudando no trafego da sua página web;</li>
-					<li>Version - mostra a versão do Bludit na lateral do painel de administração e informa quando há novas atualizações;</li>
-			</ul>
-			
-			<p>Dica: desative o plugin TinyMCE, e ative os plugins Backup, Categories, Hit Counter, Links, Navigation, RSS Feed, Search, Sitemap, Static Pages e Tags list. Alguns deles são programados, dependendo do tema, para aparecerem no sidebar (barra lateral), e você pode alterar a posição em  <em>Plugins->Alterar as posições dos plugins</em>. Verifique qual é o mais interessante para o modelo de seu site/blog e desative os que não usar.</p>
-			
-			<h4 id="plgrecommended">Plugins recomendados</h4>
-			
-			<p>Atenção, lembre-se de fazer backup antes de qualquer alteração !</p>
-			
-			<p>Listo alguns plugins interessantes:</p>			
-			<ul>
-				<li>Download plugins - Jeito fácil de fazer o download e instalar plugins (faça o download na página, e coloque dentro da pasta <em>bl-plugins</em>, em seguida ative);</li>
-				<li>Theme Download - lista todos temas disponíveis no site oficial, baixa e instala;</li>
-				<li>Theme Uninstaller - lista os temas instalados, e com um clique exclua;</li>				
-				<li>Extension Manager - Substitui os dois plugins acima, tem a função de baixar, instalar, desinstalar plugins e temas;</li>
-				<li>TinyMCEfileman - plugin customizado com um gerenciador de arquivos, não esqueça de desativar o TinyMCE que vem por padrão;</li>
-				<li>Cachy - gera o cache para as páginas do Bludit;</li>
-				<li>Contact3 - adiciona um formulário de contato em uma página estática com suporte a CAPTCHA, SMTP além de suporte a GDPR;</li>
-				<li>Simple Stats Plus - trata-se de versão melhorada do plugin Simple Stats (também depende dele para funcionar);</li>				
-				<li>Hit Counter Plus - implementa um contador personalizado para o seu projeto, e para funcionar precisa do Simple Stats Plus e Hit Counter ativo;</li>								
-				<li>Snicker - implementa um sistema de comentário próprio com captcha;</li>
-
-			</ul>		
-			
-			<p>Use os plugins abaixo com cautela</p>
-			<ul>
-				<li>Auto Updater for Bludit 3.X - faz o download e atualiza o CMS com a última versão disponível no site oficial;</li>				
-			</ul>				
-
-			
 		</section>
 		</div>
 
