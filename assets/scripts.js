@@ -15,8 +15,11 @@ window.onload=function(){
 		  // Based on the YouTube ID, we can easily find the thumbnail image
 		  var img = document.createElement("img");
 		  img.setAttribute("src", "https://i.ytimg.com/vi/" + youtube.id + "/hqdefault.jpg");
+		  img.setAttribute("style","width:120px;height:90px");			
+		  img.setAttribute("width","120");
+		  img.setAttribute("height","90");			
 		  img.setAttribute("class", "videoy-thumb");
-
+			
 		  // Overlay the Play icon to make it look like a video player
 		  var circle = document.createElement("div");
 		  circle.setAttribute("class","circle");
@@ -30,12 +33,14 @@ window.onload=function(){
 		    // Create an iFrame with autoplay set to true
 		    var iframe = document.createElement("iframe");
 		    iframe.setAttribute("src","https://www.youtube.com/embed/" + this.id + "?autoplay=0&autohide=1&border=0&wmode=opaque?rel=0&enablejsapi=1&fs=1");
+			iframe.setAttribute("width","580");
+			iframe.setAttribute("height","315");
 		    iframe.setAttribute("class","videoiframe");
 
 		    // The height and width of the iFrame should be the same as parent
-		    iframe.style.width  = this.style.width;
+		    //iframe.style.width  = this.style.width;
 
-		    iframe.style.height = this.style.height;
+		    //iframe.style.height = this.style.height;
 
 		    // Replace the YouTube thumbnail with YouTube HTML5 Player
 		    this.parentNode.replaceChild(iframe, this);
