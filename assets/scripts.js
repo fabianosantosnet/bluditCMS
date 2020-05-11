@@ -15,9 +15,9 @@ window.onload=function(){
 		  // Based on the YouTube ID, we can easily find the thumbnail image
 		  var img = document.createElement("img");
 		  img.setAttribute("src", "https://i.ytimg.com/vi/" + youtube.id + "/hqdefault.jpg");
-		  img.setAttribute("style","width:120px;height:90px");			
-		  img.setAttribute("width","120");
-		  img.setAttribute("height","90");			
+		  img.setAttribute("style","width:241px;height:181");			
+		  img.setAttribute("width","241");
+		  img.setAttribute("height","181");			
 		  img.setAttribute("class", "videoy-thumb");
 			
 		  // Overlay the Play icon to make it look like a video player
