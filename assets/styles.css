@@ -128,3 +128,11 @@ background-color:antiquewhite;color:brown}
   .sep {margin-top:20px}
   .bottom {margin:10px;padding:10px}
 }
+
+@media (max-width:391.98px) {
+  .top header h1 {font-size:1.4rem }
+  .content, .content figure img {max-width:100%}  
+  .zoomimg > div img {width:80%;height:100%}  
+  .content h2 {font-size:1.1rem}
+  .content h3 {font-size:0.9rem}
+}
