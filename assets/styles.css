@@ -12,6 +12,7 @@
 body {font-family:Inter,arial,helvetica,sans-serif;font-size:13px;color:#444;background-color:#fff;line-height:140%}
 .menu {font-family:Arial !important}
 h1,h2,h3,h4,h5 {font-family:Oxanium !important}
+h5.subh {color:#bbb !important;display:inline-block;margin:0.3rem}
 header h1 {text-shadow:-1px 1px 2px #bbb;font-size:30px;letter-spacing:3px}
 pre,code *,header p { font-family: 'Cousine', monospace !important; }
 
