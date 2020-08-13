@@ -83,4 +83,16 @@ window.onload=function(){
 		  }
 		}
 	}
+	
+	document.getElementsByClassName('links')[0].innerHTML=''+
+		'<h2>Links internos</h2>'+
+		'<ul>'+
+			'<li><a href="./index.html"><i class="fas fa-home"></i> Principal</a></li>'+
+			'<li><a href="./install.html" title="Instalação e atualização do CMS"><i class="fas fa-link"></i> Instalação</a></li>'+
+			'<li><a href="./videos.html"><i class="fas fa-link"></i> Vídeos</a></li>'+
+			'<li><a href="./prints.html"><i class="fas fa-link"></i> Snapshots</a></li>'+
+			'<li><a href="./func.html"><i class="fas fa-link"></i> Funcionamento</a></li>'+
+			'<li><a href="./plugins.html" title="Plugins do Bludit"><i class="fas fa-link"></i> Extensões</a></li>'+
+			'<li><a href="./themes.html" title="Temas do Bludit"><i class="fas fa-link"></i> Temas</a></li>'+	
+		'</ul>';
 }

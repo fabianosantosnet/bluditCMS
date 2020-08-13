@@ -41,12 +41,7 @@
 	</div>
 
 	<div class="menu">
-		<div class="links">
-		<h2>Links internos</h2>
-		<ul>
-			<li><a href="./index.html"><i class="fas fa-home"></i> Principal</a></li>
-		</ul>
-		</div>
+		<div class="links"><!-- dinamyc links --></div>
 	</div>
 
 	<div class="content">
@@ -64,11 +59,11 @@
 		<li>Nginx com módulo <a href="https://nginx.org/en/docs/http/ngx_http_rewrite_module.html">ngx_http_rewrite_module</a></li>
 		<li>Apache com módulo <a href="https://httpd.apache.org/docs/current/mod/mod_rewrite.html">mod_rewrite</a></li>
 		<li>Lighttpd com módulo <a href="https://redmine.lighttpd.net/projects/1/wiki/docs_modrewrite">mod_rewrite</a></li>
-		<li>Hiawatha com <a href="https://www.hiawatha-webserver.org/howto/url_rewrite_rules">rewrite rules</a></li>
-		<li>Para H2O veja o artigo <a href="https://forum.bludit.org/viewtopic.php?f=6&amp;t=1015">H2O HTTP/2 web server and Bludit</a> no fórum</li>
+		<li>Hiawatha com <a href="https://www.hiawatha-webserver.org/howto/url_rewrite_rules">regras de URLs</a></li>
+		<li>Para H2O veja o artigo <a href="https://forum.bludit.org/viewtopic.php?f=6&amp;t=1015">H2O HTTP/2 web server com Bludit</a> no fórum</li>
 		<li>IIS com módulo <a href="https://www.iis.net/downloads/microsoft/url-rewrite">URL Rewrite</a>, veja <a href="https://forum.bludit.org/viewtopic.php?f=6&amp;t=1420">este</a> post no fórum</li>
 		</ul>
-		<p><small>Ajude a comunidade. Grave a instalação e coloque no Youtube ! Em breve, na seção vídeos deste site.</small></p>
+		<p><small>Na seção vídeos há como instalar.</small></p>
 
 		<h4>Instalar o PHP</h4>
 		<p>Acesse o site <a href="https://www.php.net/manual/pt_BR/install.php">oficial do PHP</a> e saiba os procedimentos para instalação.</p>
@@ -94,15 +89,36 @@
 		<h4>Outros</h4>
 		<p>Data do artigo:  12/2016 -  <a href="https://sempreupdate.com.br/instalar-bludit-cms-no-ubuntu-debian/">Instalar no Debian e Derivados</a></p>
 
+		<h3>Atualização do Bludit</h3>			
+		<p><b>v3.x</b> | Para fazer o upgrade da versão realize as seguintes etapas:</p>
+		<ol>
+		<li>Fazer um backup completo;</li>
+		<li>Baixe a última versão do <a href="https://www.bludit.com/">BLUDIT CMS</a>;</li>
+		<li>Extraia o arquivo zip e substituindo a versão anterior do CMS.</li>
+		</ol>
+
+		<p>Outro modo de instalação, é utilizar os plugins "Auto Updater for Bludit 3.X" ou "Auto Update" que fazem o upgrade automático.</p>
+			
+		<p><b>v2.3.4 para v3.x</b> | Migração através do script feito por Anaggh</p>
+		<p>Considerações na atualização:</p>
+			
+		<ol>
+			<li>Fazer um backup de todo o site;</li>
+			<li>Os plugins <em>Backups</em> e <em>Time Machine X</em> serão desabilitados e seus conteúdos deletados;</li>
+			<li>Baixe o <a href="https://github.com/anaggh/bludit-scripts/tree/master/migration-v2-to-v3">script de migração</a> e coloque na raiz do site, e acesse via browser <b>http://seuSite.com/migrate.php</b>;</li>
+			<li>Este script de migração cria uma pasta chamada <strong>/migrations/ </strong>e dentro dela outra pasta chamada <strong>bl-content</strong> com as páginas e bancos compatíveis com a versão 3.x.</li>
+			<li>Após o processo de migração, delete todas as pastas, exceto /migrations/;</li>
+			<li>Instale uma nova versão do BLUDIT, e em seguida, mova /migrations/bl-content para dentro da pasta /bl-content da nova instalação.</li>
+			<li>Remova o script de migração.</li>
+		</ol>
 		</section>
 		</div>
 
 	<div class="bottom">
 	      <footer>
-
-		<p>Projeto mantido por <a href="https://github.com/fabianosantosnet"><i class="fab fa-github"></i> fabianosantosnet</a><br>
-		   <small>Hospedado no GitHub Pages &mdash; Tema criado por <a href="https://www.fabianosantos.net">fabianosantos.net</a></small></p>
-		<p><small>Tecnologias <i class="fab fa-css3"> CSS3</i> - <i class="fab fa-html5"> HTML5</i> - <i class="fab fa-js-square"> JavaScript</i> - <i class="fab fa-font-awesome-flag"> Fonte Awesome</i></small></p>
+			<p>Projeto mantido por <a href="https://github.com/fabianosantosnet"><i class="fab fa-github"></i> fabianosantosnet</a><br>
+			   <small>Hospedado no GitHub Pages &mdash; Tema criado por <a href="https://www.fabianosantos.net">fabianosantos.net</a></small></p>
+			<p><small>Tecnologias <i class="fab fa-css3"> CSS3</i> - <i class="fab fa-html5"> HTML5</i> - <i class="fab fa-js-square"> JavaScript</i> - <i class="fab fa-font-awesome-flag"> Fonte Awesome</i></small></p>
 	      </footer>
 	</div>
 </div>
