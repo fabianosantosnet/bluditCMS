@@ -7,120 +7,126 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 
-<title>Bludit CMS em Língua Portuguesa | Instalação</title>
+  <title>Bludit CMS em Língua Portuguesa | Instalação</title>
 
-<meta property="og:title" content="Bludit CMS pt-br - Como instalar" />
-<meta property="og:locale" content="pt_BR" />
+  <meta name="description" content="Informações referente a instalação do Bludit CMS">
+  <meta name="author" content="Fabiano Santos - @fabianosantosnet">
+	
+  <meta property="og:locale" content="pt, pt_BR, pt_PT">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Como instalar o Bludit CMS">
+  <meta property="og:site_name" content="bluditCMS">
+  <meta property="og:description" content="Aprenda diversas maneira de instalar o Bludit CMS">
+  <meta property="og:url" content="https://fabianosantosnet.github.io/bluditCMS/install.html">
+  <meta property="og:image" content="https://fabianosantosnet.github.io/bluditCMS/assets/logo-bludit-fb.png">  
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">  
 
-<meta name="description" content="Informações referente a instalação do Bludit CMS" />
-<meta property="og:description" content="Informações referente a instalação do Bludit CMS" />
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:creator" content="@fabianosantos_n">    
+  <meta property="twitter:image" content="https://fabianosantosnet.github.io/bluditCMS/assets/logo-bludit-tw.png">
+	
+  <link rel="canonical" href="https://fabianosantosnet.github.io/bluditCMS/">
+  <link rel="stylesheet" href="assets/styles.css">  
 
-<meta property="og:url" content="https://fabianosantosnet.github.io/bluditCMS/" />
-<meta property="og:site_name" content="bluditCMS" />
-<meta name="author" content="https://fabianosantosnet.github.io/bluditCMS/">
-
-<link rel="canonical" href="https://fabianosantosnet.github.io/bluditCMS/" />
-<link rel="stylesheet" href="assets/styles.css" />  
-
-<script type="application/ld+json">
-{"description":"Informações referente a instalação do Bludit CMS","@type":"WebSite","url":"https://fabianosantosnet.github.io/bluditCMS/","name":"bluditCMS","headline":"Bludit CMS em Língua Portuguesa","@context":"https://schema.org"}
-</script>
-<script src="assets/scripts.js" defer></script>
+  <script src="assets/scripts.js" defer></script>
 
   </head>
   <body>
-<div class="parent">
+	  
+	<div class="parent">
 
-	<div class="top">
-	      <header>
-      	        <img src="assets/logo.png" alt="Logo">
-		<h1><a href="https://fabianosantosnet.github.io/bluditCMS/">Bludit CMS</a></h1>
-		<p>Informações referente ao Bludit CMS em lingua portuguesa</p>
-		<p class="view"><a href="https://github.com/fabianosantosnet/bluditCMS">GitHub deste site</a></p><!-- https://git.fabianosantos.net -->
-	      </header>
-	</div>
-
-	<div class="menu">
-		<div class="links"><!-- dinamyc links --></div>
-	</div>
-
-	<div class="content">
-		<section>
-		<h2 id="bludit-cms-em-língua-portuguesa">Bludit CMS | Instalação</h2>
-
-		<h3>Requerimentos e Preparação do Ambiente</h3>
-		<p>Antes de tudo, é necessário preparar um servidor web com PHP 5.6 ou superior e os módulos PHP <a href="https://www.php.net/manual/en/book.mbstring.php">mbstring</a>, <a href="https://www.php.net/manual/en/book.image.php">gd</a>, <a href="https://www.php.net/manual/en/book.dom.php">dom</a>, <a href="https://www.php.net/manual/en/book.json.php">json</a>. No linux seria como: <small><code>php*-mbstring php*-gd php*-xml php*-json libapache2-mod-php php-mcrypt</code> </small> onde no lugar do '*' é a versão do PHP.
-
-		<p><b>Não é necessário banco de dados !</b></p>
-
-		<p>Bludit pode ser usado em quase todos webservers:</p>
-		<ul>
-		<li><a href="https://www.php.net/manual/en/features.commandline.webserver.php">PHP Built-in web server</a></li>
-		<li>Nginx com módulo <a href="https://nginx.org/en/docs/http/ngx_http_rewrite_module.html">ngx_http_rewrite_module</a></li>
-		<li>Apache com módulo <a href="https://httpd.apache.org/docs/current/mod/mod_rewrite.html">mod_rewrite</a></li>
-		<li>Lighttpd com módulo <a href="https://redmine.lighttpd.net/projects/1/wiki/docs_modrewrite">mod_rewrite</a></li>
-		<li>Hiawatha com <a href="https://www.hiawatha-webserver.org/howto/url_rewrite_rules">regras de URLs</a></li>
-		<li>Para H2O veja o artigo <a href="https://forum.bludit.org/viewtopic.php?f=6&amp;t=1015">H2O HTTP/2 web server com Bludit</a> no fórum</li>
-		<li>IIS com módulo <a href="https://www.iis.net/downloads/microsoft/url-rewrite">URL Rewrite</a>, veja <a href="https://forum.bludit.org/viewtopic.php?f=6&amp;t=1420">este</a> post no fórum</li>
-		</ul>
-		<p><small>Na seção vídeos há como instalar.</small></p>
-
-		<h4>Instalar o PHP</h4>
-		<p>Acesse o site <a href="https://www.php.net/manual/pt_BR/install.php">oficial do PHP</a> e saiba os procedimentos para instalação.</p>
-
-		<h4>Pacotes</h4>
-		<p>Caso prefira instaladores com tudo junto pode-se usar os WAMPs/LAMPs:</p>
-		<ol>
-		<li><em>WAMP (Windows, Apache, MySQL, PHP):</em> <a href="https://www.vswamp.com/">Vertrigo Serv</a>, <a href="http://www.ampps.com">AMPPS</a>, <a href="https://www.apachefriends.org/pt_br/index.html" title="Disponível para Windows e Linux">XAMPP</a>, <a href="http://www.wampserver.com/en/">WAMPServer</a>;</li>
-			
-		<li><em>LAMP (Linux, Apache, MySQL, PHP):</em> Veja o artigo de <a href="https://www.edivaldobrito.com.br/instale-lamp-no-linux-e-tenha-um-servidor-web-em-seu-pc/">servidor web no Ubuntu/Debian</a> ou mais customizado no <a href="https://howtoubuntu.org/how-to-install-lamp-on-ubuntu">Ubuntu</a> (ignore o passo 2).</li>
-			
-		</ol>
-
-		<h3>Instalação do Bludit</h3>
-		<p>Nesta seção será reunida informações de instalação do Bludit em diversas plataformas.</p>
-		<h4>Documentação oficial</h4>
-		<p>Conforme <a href="https://docs.bludit.com/en/getting-started/installation-guide">instrução de instalação da documentação oficial (en)</a>, após efetuar o <a href="https://www.bludit.com/">download no site oficial</a>, extraia na pasta de seu webserver, em seguida, abra via browser o caminho <em>http://localhost/</em>, para execução local na pasta raiz, ou <em>http://localhost/bludit/</em> caso tenha extraido na pasta bludit. Substitua localhost pelo nome de domínio adequado.</p>
-
-		<h4>Via CPANEL</h4>
-		<p>Data do artigo:  08/2016 - <a href="https://ajuda.minas.com.br/hospedagem-de-sites/cpanel/softaculous/instalar-o-bludit-via-softaculous/">Como instalar utilizando o Softaculous</a></p>
-		<p>Para hospedagem, se preferir faça o <a href="https://www.bludit.com/">upload do arquivo zipado</a> na pasta public folder via gerenciador de arquivos (filemanager) ou FTP, extraia na pasta desejada ou na raiz, e depois acesse pelo navegador a url <em>http://nomedosite/install.php</em> ou <em>http://nomedosite/nomeDaPasta/install.php</em>.</p>
-
-		<h4>Outros</h4>
-		<p>Data do artigo:  12/2016 -  <a href="https://sempreupdate.com.br/instalar-bludit-cms-no-ubuntu-debian/">Instalar no Debian e Derivados</a></p>
-
-		<h3>Atualização do Bludit</h3>			
-		<p><b>v3.x</b> | Para fazer o upgrade da versão realize as seguintes etapas:</p>
-		<ol>
-		<li>Fazer um backup completo;</li>
-		<li>Baixe a última versão do <a href="https://www.bludit.com/">BLUDIT CMS</a>;</li>
-		<li>Extraia o arquivo zip e substituindo a versão anterior do CMS.</li>
-		</ol>
-
-		<p>Outro modo de instalação, é utilizar os plugins "Auto Updater for Bludit 3.X" ou "Auto Update" que fazem o upgrade automático.</p>
-			
-		<p><b>v2.3.4 para v3.x</b> | Migração através do script feito por Anaggh</p>
-		<p>Considerações na atualização:</p>
-			
-		<ol>
-			<li>Fazer um backup de todo o site;</li>
-			<li>Os plugins <em>Backups</em> e <em>Time Machine X</em> serão desabilitados e seus conteúdos deletados;</li>
-			<li>Baixe o <a href="https://github.com/anaggh/bludit-scripts/tree/master/migration-v2-to-v3">script de migração</a> e coloque na raiz do site, e acesse via browser <b>http://seuSite.com/migrate.php</b>;</li>
-			<li>Este script de migração cria uma pasta chamada <strong>/migrations/ </strong>e dentro dela outra pasta chamada <strong>bl-content</strong> com as páginas e bancos compatíveis com a versão 3.x.</li>
-			<li>Após o processo de migração, delete todas as pastas, exceto /migrations/;</li>
-			<li>Instale uma nova versão do BLUDIT, e em seguida, mova /migrations/bl-content para dentro da pasta /bl-content da nova instalação.</li>
-			<li>Remova o script de migração.</li>
-		</ol>
-		</section>
+		<div class="top">
+			  <header>
+					<img src="assets/logo.png" alt="Logo">
+			<h1><a href="https://fabianosantosnet.github.io/bluditCMS/">Bludit CMS</a></h1>
+			<p>Informações referente ao Bludit CMS em lingua portuguesa</p>
+			<p class="view"><a href="https://github.com/fabianosantosnet/bluditCMS">GitHub deste site</a></p><!-- https://git.fabianosantos.net -->
+			  </header>
 		</div>
 
-	<div class="bottom">
-	      <footer>
+		<div class="menu">
+			<div class="links"><!-- dinamyc links --></div>
+		</div>
+
+		<div class="content">
+			<section>
+			<h2 id="bludit-cms-em-língua-portuguesa">Bludit CMS | Instalação</h2>
+
+			<h3>Requerimentos e Preparação do Ambiente</h3>
+			<p>Antes de tudo, é necessário preparar um servidor web com PHP 5.6 ou superior e os módulos PHP <a href="https://www.php.net/manual/en/book.mbstring.php">mbstring</a>, <a href="https://www.php.net/manual/en/book.image.php">gd</a>, <a href="https://www.php.net/manual/en/book.dom.php">dom</a>, <a href="https://www.php.net/manual/en/book.json.php">json</a>. No linux seria como: <small><code>php*-mbstring php*-gd php*-xml php*-json libapache2-mod-php php-mcrypt</code> </small> onde no lugar do '*' é a versão do PHP.
+
+			<p><b>Não é necessário banco de dados !</b></p>
+
+			<p>Bludit pode ser usado em quase todos webservers:</p>
+			<ul>
+			<li><a href="https://www.php.net/manual/en/features.commandline.webserver.php">PHP Built-in web server</a></li>
+			<li>Nginx com módulo <a href="https://nginx.org/en/docs/http/ngx_http_rewrite_module.html">ngx_http_rewrite_module</a></li>
+			<li>Apache com módulo <a href="https://httpd.apache.org/docs/current/mod/mod_rewrite.html">mod_rewrite</a></li>
+			<li>Lighttpd com módulo <a href="https://redmine.lighttpd.net/projects/1/wiki/docs_modrewrite">mod_rewrite</a></li>
+			<li>Hiawatha com <a href="https://www.hiawatha-webserver.org/howto/url_rewrite_rules">regras de URLs</a></li>
+			<li>Para H2O veja o artigo <a href="https://forum.bludit.org/viewtopic.php?f=6&amp;t=1015">H2O HTTP/2 web server com Bludit</a> no fórum</li>
+			<li>IIS com módulo <a href="https://www.iis.net/downloads/microsoft/url-rewrite">URL Rewrite</a>, veja <a href="https://forum.bludit.org/viewtopic.php?f=6&amp;t=1420">este</a> post no fórum</li>
+			</ul>
+			<p><small>Na seção vídeos há como instalar.</small></p>
+
+			<h4>Instalar o PHP</h4>
+			<p>Acesse o site <a href="https://www.php.net/manual/pt_BR/install.php">oficial do PHP</a> e saiba os procedimentos para instalação.</p>
+
+			<h4>Pacotes</h4>
+			<p>Caso prefira instaladores com tudo junto pode-se usar os WAMPs/LAMPs:</p>
+			<ol>
+			<li><em>WAMP (Windows, Apache, MySQL, PHP):</em> <a href="https://www.vswamp.com/">Vertrigo Serv</a>, <a href="http://www.ampps.com">AMPPS</a>, <a href="https://www.apachefriends.org/pt_br/index.html" title="Disponível para Windows e Linux">XAMPP</a>, <a href="http://www.wampserver.com/en/">WAMPServer</a>;</li>
+
+			<li><em>LAMP (Linux, Apache, MySQL, PHP):</em> Veja o artigo de <a href="https://www.edivaldobrito.com.br/instale-lamp-no-linux-e-tenha-um-servidor-web-em-seu-pc/">servidor web no Ubuntu/Debian</a> ou mais customizado no <a href="https://howtoubuntu.org/how-to-install-lamp-on-ubuntu">Ubuntu</a> (ignore o passo 2).</li>
+
+			</ol>
+
+			<h3>Instalação do Bludit</h3>
+			<p>Nesta seção será reunida informações de instalação do Bludit em diversas plataformas.</p>
+			<h4>Documentação oficial</h4>
+			<p>Conforme <a href="https://docs.bludit.com/en/getting-started/installation-guide">instrução de instalação da documentação oficial (en)</a>, após efetuar o <a href="https://www.bludit.com/">download no site oficial</a>, extraia na pasta de seu webserver, em seguida, abra via browser o caminho <em>http://localhost/</em>, para execução local na pasta raiz, ou <em>http://localhost/bludit/</em> caso tenha extraido na pasta bludit. Substitua localhost pelo nome de domínio adequado.</p>
+
+			<h4>Via CPANEL</h4>
+			<p>Data do artigo:  08/2016 - <a href="https://ajuda.minas.com.br/hospedagem-de-sites/cpanel/softaculous/instalar-o-bludit-via-softaculous/">Como instalar utilizando o Softaculous</a></p>
+			<p>Para hospedagem, se preferir faça o <a href="https://www.bludit.com/">upload do arquivo zipado</a> na pasta public folder via gerenciador de arquivos (filemanager) ou FTP, extraia na pasta desejada ou na raiz, e depois acesse pelo navegador a url <em>http://nomedosite/install.php</em> ou <em>http://nomedosite/nomeDaPasta/install.php</em>.</p>
+
+			<h4>Outros</h4>
+			<p>Data do artigo:  12/2016 -  <a href="https://sempreupdate.com.br/instalar-bludit-cms-no-ubuntu-debian/">Instalar no Debian e Derivados</a></p>
+
+			<h3>Atualização do Bludit</h3>			
+			<p><b>v3.x</b> | Para fazer o upgrade da versão realize as seguintes etapas:</p>
+			<ol>
+			<li>Fazer um backup completo;</li>
+			<li>Baixe a última versão do <a href="https://www.bludit.com/">BLUDIT CMS</a>;</li>
+			<li>Extraia o arquivo zip e substituindo a versão anterior do CMS.</li>
+			</ol>
+
+			<p>Outro modo de instalação, é utilizar os plugins "Auto Updater for Bludit 3.X" ou "Auto Update" que fazem o upgrade automático.</p>
+
+			<p><b>v2.3.4 para v3.x</b> | Migração através do script feito por Anaggh</p>
+			<p>Considerações na atualização:</p>
+
+			<ol>
+				<li>Fazer um backup de todo o site;</li>
+				<li>Os plugins <em>Backups</em> e <em>Time Machine X</em> serão desabilitados e seus conteúdos deletados;</li>
+				<li>Baixe o <a href="https://github.com/anaggh/bludit-scripts/tree/master/migration-v2-to-v3">script de migração</a> e coloque na raiz do site, e acesse via browser <b>http://seuSite.com/migrate.php</b>;</li>
+				<li>Este script de migração cria uma pasta chamada <strong>/migrations/ </strong>e dentro dela outra pasta chamada <strong>bl-content</strong> com as páginas e bancos compatíveis com a versão 3.x.</li>
+				<li>Após o processo de migração, delete todas as pastas, exceto /migrations/;</li>
+				<li>Instale uma nova versão do BLUDIT, e em seguida, mova /migrations/bl-content para dentro da pasta /bl-content da nova instalação.</li>
+				<li>Remova o script de migração.</li>
+			</ol>
+			</section>
+		</div>
+
+		<div class="bottom">
+		  <footer>
 			<p>Projeto mantido por <a href="https://github.com/fabianosantosnet"><i class="fab fa-github"></i> fabianosantosnet</a><br>
 			   <small>Hospedado no GitHub Pages &mdash; Tema criado por <a href="https://www.fabianosantos.net">fabianosantos.net</a></small></p>
 			<p><small>Tecnologias <i class="fab fa-css3"> CSS3</i> - <i class="fab fa-html5"> HTML5</i> - <i class="fab fa-js-square"> JavaScript</i> - <i class="fab fa-font-awesome-flag"> Fonte Awesome</i></small></p>
-	      </footer>
+		  </footer>
+		</div>
+		
 	</div>
-</div>
   </body>
 </html>
