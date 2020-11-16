@@ -94,5 +94,6 @@ window.onload=function(){
 			'<li><a href="./func.html"><i class="fas fa-link"></i> Funcionamento</a></li>'+
 			'<li><a href="./plugins.html" title="Plugins do Bludit"><i class="fas fa-link"></i> Extensões</a></li>'+
 			'<li><a href="./themes.html" title="Temas do Bludit"><i class="fas fa-link"></i> Temas</a></li>'+	
+			'<li><a href="./articles.html" title="Artigos do Bludit"><i class="fas fa-link"></i> Artigos</a></li>'+	
 		'</ul>';
 }
