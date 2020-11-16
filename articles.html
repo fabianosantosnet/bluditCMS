@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html lang="pt">
+<head>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+
+  <title>Bludit CMS em Língua Portuguesa | Artigos</title>
+
+  <meta name="description" content="Artigos referente ao Bludit CMS">  
+  <meta name="author" content="Fabiano Santos - @fabianosantosnet">
+	
+  <meta property="og:locale" content="pt, pt_BR, pt_PT">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Artigos do Bludit CMS">
+  <meta property="og:site_name" content="bluditCMS">
+  <meta property="og:description" content="Artigos referente ao Bludit CMS">
+  <meta property="og:url" content="https://fabianosantosnet.github.io/bluditCMS/articles.html">
+  <meta property="og:image" content="https://fabianosantosnet.github.io/bluditCMS/assets/logo-bludit-fb.png">  
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">  
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@fabianosantos_n">    
+  <meta name="twitter:image" content="https://fabianosantosnet.github.io/bluditCMS/assets/logo-bludit-tw.png">
+
+  <link rel="canonical" href="https://fabianosantosnet.github.io/bluditCMS/">
+  <link rel="stylesheet" href="assets/styles.css">  
+
+  <script src="assets/scripts.js" defer></script>
+
+  </head>
+  <body>
+<div class="parent">
+	<div class="top">
+	      <header>
+      	        <img src="assets/logo.png" alt="Logo">
+				<h1><a href="https://fabianosantosnet.github.io/bluditCMS/">Bludit CMS</a></h1>
+				<p>Informações referente ao Bludit CMS em lingua portuguesa</p>
+				<p class="view"><a href="https://github.com/fabianosantosnet/bluditCMS">GitHub deste site</a></p><!-- https://git.fabianosantos.net -->
+	      </header>
+	</div>
+
+	<div class="menu">
+		<div class="links"><!-- dinamyc links --></div>
+	</div>
+
+	<div class="content">
+	    <section>
+
+	      <h2>Bludit CMS | Artigos</h2>
+
+		<h3>PHP + NGINX Separados e configuração para o funcionamento do BLUDIT CMS</h3>
+		
+		<p>Neste artigo você irá prepara o ambiente do PHP + NGINX para utilização no BLUDIT CMS no Windows 10</p>
+
+		<p>Primeiro baixe os arquivos e descompacte-os.<br>
+			<a href="https://redmine.lighttpd.net/attachments/660/RunHiddenConsole.zip">RunHiddenConsole</a><br>
+			<a href="https://windows.php.net/downloads/releases/php-7.4.12-Win32-vc15-x64.zip">PHP 7.4.12</a><br>
+			<a href="https://nginx.org/download/nginx-1.18.0.zip">NGINX 1.18.0</a><br>
+			<a href="assets/files/01-pst-startStopServices.zip">Stop/Start</a>
+		</p>
+
+		<p>Crie a pasta <code>C:\myWebServer\</code> e depois mova as pastas/arquivos para ela deixando conforme abaixo.</p>		
+		<p><img src="assets/img/articles/01-pst-nginx.png"></p>
+			
+		<p>Clique com o botão direito em cima dos links - <a href="assets/files/php.ini">PHP.INI</a> e <a href="assets/files/nginx.conf">NGINX.CONF</a> - e clique em <i>Salvar Link Como (Save Link As)</i>.
+			Depois mova o <i>php.ini</i> para <code>C:\myWebServer\php-7.4.12</code> e o <i>nginx.conf</i> para <code>C:\myWebServer\nginx-1.18.0\conf</code>.</p>
+		
+		<p>Para iniciar/startar utilize os scripts disponibilizados na pasta. Após clicar em start-services.bat acesse o navegador para verificar se o servidor está OK.</p>	
+		
+		<p>Suas aplicações e scripts PHP devem ser colocados em <code>C:\myWebServer\nginx-1.18.0\html</code>.</p>
+			
+		<p>Com essas configurações você pode baixar o <a href="https://www.bludit.com/">Bludit CMS</a> e instalar.</p>
+			
+		<p>Outras informações<br><small>
+		https://www.nginx.com/resources/wiki/start/topics/examples/phpfastcgionwindows/<br>
+		https://windows.php.net/download/			
+		</small></p>
+	      </section>
+		</div>
+
+		<div class="bottom">
+		  <footer>
+				<p>Projeto mantido por <a href="https://github.com/fabianosantosnet"><i class="fab fa-github"></i> fabianosantosnet</a><br>
+				   <small>Hospedado no GitHub Pages &mdash; Tema criado por <a href="https://www.fabianosantos.net">fabianosantos.net</a></small></p>
+				<p><small>Tecnologias <i class="fab fa-css3"> CSS3</i> - <i class="fab fa-html5"> HTML5</i> - <i class="fab fa-js-square"> JavaScript</i> - <i class="fab fa-font-awesome-flag"> Fonte Awesome</i></small></p>
+		  </footer>
+		</div>
+	</div>
+  </body>
+</html>
