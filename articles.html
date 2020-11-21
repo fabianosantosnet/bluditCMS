@@ -81,6 +81,40 @@
 		https://www.nginx.com/resources/wiki/start/topics/examples/phpfastcgionwindows/<br>
 		https://windows.php.net/download/			
 		</small></p>
+			
+		<hr>
+			
+		<h3 id="art2">Dicas de segurança</h3>
+		
+		<h4>Simples</h4>
+		<p>Após a instalação vá em <code>Administrar->Usuários->Adicionar Novo Usuário</code> e no campo usuário insira um nome bem diferente ao qual será utilizado apenas para administrar o BLUDIT (gerenciar usuários, plugins, temas, categorias e configurações básicas).</p>
+		<p>Vá em <code>Administrar->Usuários</code> clique em <i>admin</i> depois na aba Segurança e pressione o botão <i>Desativar usuário</i>. Para habilitá-lo novamente basta alterar a senha.</p>		
+		<p>Recomendado para senhas: use no mínimo 8 caracteres contendo maiúsculas, minúsculas, números e caracteres especiais. Caso tenha dificuldades sugiro utilizar um <a href="https://duckduckgo.com/?q=gerador+de+senhas">gerador de senhas</a>. Troque a senha algumas vezes ao ano.</p>
+		<p>Crie um novo usuário com função Autor ou Editor para gerenciar seus artigos (crie mais de um usuário dessas funções caso queira). <strong>Lembre-se de preencher as informações de apelido e nome diferentes do nome do usuário para que não tentem invadir seu sistema pois alguns temas mostram o nome de quem publicou o conteúdo.</strong></p>
+			
+		<p>Remova os arquivos de instalação <i>install.php</i> e o <i>arquivo LICENSE</i>.</p>
+			
+		<p>Habilite o certificado de segurança na sua hospedagem - se não quiser pagar por um, contrate uma hospedagem que venha com <i>Let's Encrypt</i>.</p>		
+			
+		<h4>Avançada</h4>
+		<p>Edite o arquivo <code>/bl-kernel/security.class.php</code> e localize:</p>
+			<code class="minilight">private $dbFields = array(
+	'minutesBlocked'=>5,
+	'numberFailuresAllowed'=>10,
+	'blackList'=>array()
+);</code>
+			<p>Em <i>minutesBlocked</i> altere o número 5 para o tanto de minutos de bloqueio de IP desejado.<br>Em <i>numberFailuresAllowed</i> altere o 10 para o número de falhas permitidas.</p>
+			
+			<p>Outras opções seriam alterar a estrutura das pastas e editar os arquivos de configuração, por exemplo, por padrão o painel de administração está na pasta <code>/admin/</code>, edite o <code>/bl-kernel/boot/variables.php</code> e substitue o valor <i>admin</i> localizado em <code>define('ADMIN_URI_FILTER', 'admin')</code> para o valor desejado.</p>
+			<p>Os servidores web Apache e NGINX são os mais utilizados atualmente, portanto escolher uma hospedagem com um menos conhecido também ajuda na proteção.</p>	
+			
+			<p>Algumas hospedagens permitem a edição do <i>php.ini</i>, coloque "display_errors=Off", . Sempre utilize versões do PHP recentes ( pelo menos da 7.2 em diante ).</p>
+			
+			<p>Outras dicas de segurança podem ser verificadas no links:
+				<a href="http://encurtador.com.br/bepQ6">lista de segurança do PHP</a>,
+				<a href="http://encurtador.com.br/nqvzI">configurações do PHP.INI</a> e
+				<a href="encurtador.com.br/flosS">ocultar cabeçalhos HTTP</a>.
+			</p>
 	      </section>
 		</div>
 
