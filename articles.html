@@ -104,11 +104,16 @@
 	'blackList'=>array()
 );</code>
 			<p>Em <i>minutesBlocked</i> altere o número 5 para o tanto de minutos de bloqueio de IP desejado.<br>Em <i>numberFailuresAllowed</i> altere o 10 para o número de falhas permitidas.</p>
+
+			<p>Altere a URL do painel de administração ao qual tem o padrão <code>http://seuSite.com<b>/admin</b></code>, edite o arquivo <code>/bl-kernel/boot/variables.php</code> e substitue o valor <i>admin</i> localizado em <code>define('ADMIN_URI_FILTER', '<b>admin</b>')</code> para o valor desejado, por exemplo, <code><b>acesso-restrito</b></code> então acesse o painel como <code>http://seuSite.com<b>/acesso-restrito</b></code>.</p>
 			
-			<p>Outras opções seriam alterar a estrutura das pastas e editar os arquivos de configuração, por exemplo, por padrão o painel de administração está na pasta <code>/admin/</code>, edite o <code>/bl-kernel/boot/variables.php</code> e substitue o valor <i>admin</i> localizado em <code>define('ADMIN_URI_FILTER', 'admin')</code> para o valor desejado.</p>
+			<p>Outras opções seriam alterar a estrutura das pastas e editar os arquivos de configuração. Renomeia as pastas <code>bl-*</code> e depois substitua os valores pela URL nova em <code>/index.php</code> e também em <code>bl-kernel/boot/init.php</code>.</p>
+
 			<p>Os servidores web Apache e NGINX são os mais utilizados atualmente, portanto escolher uma hospedagem com um menos conhecido também ajuda na proteção.</p>	
 			
-			<p>Algumas hospedagens permitem a edição do <i>php.ini</i>, coloque "display_errors=Off", . Sempre utilize versões do PHP recentes ( pelo menos da 7.2 em diante ).</p>
+			<p>Algumas hospedagens permitem a edição do <i>php.ini</i>, então desative alguns recursos colocando o valor para 'off' como em "display_errors=Off" e nos demais: expose_php, register_globals, magic_quotes_gpc e allow_url_include.</p>
+			
+			<p>Sempre utilize versões do PHP recentes ( pelo menos da 7.2 em diante ).</p>
 			
 			<p>Outras dicas de segurança podem ser verificadas no links:
 				<a href="http://encurtador.com.br/bepQ6">lista de segurança do PHP</a>,
