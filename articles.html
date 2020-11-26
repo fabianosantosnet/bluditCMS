@@ -109,11 +109,13 @@
 			
 			<p>Outras opções seriam alterar a estrutura das pastas e editar os arquivos de configuração. Renomeia as pastas <code>bl-*</code> e depois substitua os valores pela URL nova em <code>/index.php</code> e também em <code>bl-kernel/boot/init.php</code>.</p>
 
+			<p>Remova do código a versão do CMS em <code>/bl-kernel/helpers/theme.class.php</code> onde encontrar '?version='.</p>
+			
+			<p>Sempre utilize versões do PHP recentes ( pelo menos da 7.2 em diante ).</p>
+			
 			<p>Os servidores web Apache e NGINX são os mais utilizados atualmente, portanto escolher uma hospedagem com um menos conhecido também ajuda na proteção.</p>	
 			
 			<p>Algumas hospedagens permitem a edição do <i>php.ini</i>, então desative alguns recursos colocando o valor para 'off' como em "display_errors=Off" e nos demais: expose_php, register_globals, magic_quotes_gpc e allow_url_include.</p>
-			
-			<p>Sempre utilize versões do PHP recentes ( pelo menos da 7.2 em diante ).</p>
 			
 			<p>Outras dicas de segurança podem ser verificadas no links:
 				<a href="http://encurtador.com.br/bepQ6">lista de segurança do PHP</a>,
