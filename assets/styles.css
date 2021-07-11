@@ -59,7 +59,7 @@ a:hover {color:darkorange}
 .tip,.note {font-weight:bold;font-size:11px;background-color:bisque !important;display:inline-block}
 .note {width:100%;padding:10px !important;margin:20px 0;background-color:lightgoldenrodyellow !important;}
 
-.top { grid-area: 1 / 1 / 2 / 3;border-bottom:10px inset #e9967a;
+.top { grid-area: 1 / 1 / 2 / 3;border-bottom:10px solid brown;
       background-color:antiquewhite}
 
 .top h1 {margin-top:-140px;margin-left:190px;text-transform:uppercase}
@@ -68,14 +68,14 @@ a:hover {color:darkorange}
           background:linear-gradient(90deg, #d53369 0%, #daae51 100%)}
 .top p {margin-top:0px;margin-left:190px;font-family:serif;color:brown}
 
-.menu { grid-area: 2 / 1 / 4 / 2;padding-top:50px;background-color:#e9967a}
+.menu { grid-area: 2 / 1 / 4 / 2;padding-top:50px;background-color:brown}
 .menu > div {margin-top:20px}
-.menu h2 {background-color:antiquewhite;padding:5px;
-        font-size:16px;color:darksalmon}
+.menu h2 {background-color:antiquewhite;padding:0.6rem;
+        font-size:0.8rem;color:brown;;text-transform:uppercase;box-shadow:-1px 1px 10px brown}
 
 .menu ul {list-style:none;padding:5px;width:90%}
-.menu ul li {padding:5px 10px;border-bottom:1px inset antiquewhite}
-.menu ul li a {text-decoration:none;font-weight:bold;width:100%;
+.menu ul li {padding:0.3rem 0.5rem;border-bottom:1px solid antiquewhite}
+.menu ul li a {text-decoration:none;width:100%;
   			   display:inline-block;color:antiquewhite}
 
 .menu ul li a:hover {color:#fff;width:100%;}
@@ -87,31 +87,31 @@ a:hover {color:darkorange}
 .content {grid-area: 2 / 2 / 4 / 3;padding:10px;margin:30px 0px 30px 25px;clear:both}
 
 
-.content h2 {background-color:darksalmon;padding:10px;font-size:24px;
+.content h2 {background-color:brown;padding:10px;font-size:24px;
             text-transform:uppercase;color:#fff;
             margin:-20px -10px 0 -10px;
             border-top:20px outset antiquewhite
 }
 
 .content h3 {padding:10px;font-size:18px;font-family:serif;
-color:darkgray;border-left:10px outset antiquewhite;margin-top:30px;
-  border-bottom:1px inset antiquewhite;background:url('line2.png') #f5f5f5}
-.content p {color:#777;background:#fff;padding:5px 10px}
+color:brown;border-left:10px outset brown;margin-top:30px;
+  border-bottom:1px inset darksalmon;background-color:antiquewhite}
+.content p {color:#555;background:#fff;padding:5px 10px}
 .content img {max-width:100%}
 .content img.imghomecontent {border:1px double #f5f5f5;margin:10px;max-width:98%}
-.content h4 {padding:10px;color:darksalmon;border-bottom:1px double antiquewhite}
+.content h4 {margin-left:10px;padding:10px 0;color:#E17267;border-bottom:1px double antiquewhite}
 .content ul li,.content ol li {color:#777 !important;}
 
 :target {  background-color: #ffb }
 
 .zoomimg {margin-left:10px}
 .zoomimg > div img {width:200px;height:100px;cursor:pointer}
-.content h5 {font-size:13px;border-bottom:1px double #f5f5f5;color:#bbb}
+.content h5 {font-size:13px;border-bottom:1px double #f5f5f5;color:#999}
 
 .divulg figure {margin:0 10px;padding:0;display:inline-block}
 .divulg figure figcaption {max-width:200px;font-size:11px;background:#f5f5f5;padding:3px}
 
-.bottom { grid-area: 4 / 1 / 5 / 3;border-top:10px outset #e9967a;
+.bottom { grid-area: 4 / 1 / 5 / 3;border-top:10px outset brown;
   text-align:right;padding:10px 40px 0 0;height:100px;
 background-color:antiquewhite;color:brown}
 
