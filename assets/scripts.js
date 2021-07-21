@@ -9,15 +9,28 @@ window.onload=function(){
 
 		for (var i=0; i<videos.length; i++)
 		{
-
 		  var youtube = videos[i];
 
+			  if(window.outerWidth>1200) {
+			    $wid='900';$hei=395;
+			  }else
+			  if(window.outerWidth>800) {
+			    $wid=640;$hei=395;
+			  }else
+			  if(window.outerWidth>500) {
+			    $wid=480;$hei=315;
+			  }
+			  if(window.outerWidth<500) {
+			    $wid=(window.outerWidth);$hei=(window.outerWidth-100);
+			  }
+
+			
 		  // Based on the YouTube ID, we can easily find the thumbnail image
-		  var img = document.createElement("img");
-		  img.setAttribute("src", "https://i.ytimg.com/vi/" + youtube.id + "/hqdefault.jpg");
-		  img.setAttribute("style","width:241px;height:181");			
-		  img.setAttribute("width","241");
-		  img.setAttribute("height","181");			
+		  var img = document.createElement("img");			
+		  img.setAttribute("src", "https://i.ytimg.com/vi/" + youtube.id + "/mqdefault.jpg");
+		  //img.setAttribute("style","width:241px;height:181px");			
+		  img.setAttribute("width","320");
+		  img.setAttribute("height","180");			
 		  img.setAttribute("class", "videoy-thumb");
 			
 		  // Overlay the Play icon to make it look like a video player
@@ -30,23 +43,23 @@ window.onload=function(){
 		  // Attach an onclick event to the YouTube Thumbnail
 		  youtube.onclick = function()
 		  {
-		    // Create an iFrame with autoplay set to true
+			// Create an iFrame with autoplay set to true			  
 		    var iframe = document.createElement("iframe");
-		    iframe.setAttribute("src","https://www.youtube.com/embed/" + this.id + "?autoplay=0&autohide=1&border=0&wmode=opaque?rel=0&enablejsapi=1&fs=1");
-			iframe.setAttribute("width","580");
-			iframe.setAttribute("height","315");
+		    iframe.setAttribute("src","https://www.youtube.com/embed/" + this.id + "?autoplay=0&autohide=1&border=0&wmode=opaque?rel=0&enablejsapi=1&fs=1");			  
+			iframe.setAttribute("width",$wid);
+			iframe.setAttribute("height",$hei);
 		    iframe.setAttribute("class","videoiframe");
 
 		    // The height and width of the iFrame should be the same as parent
-		    //iframe.style.width  = this.style.width;
+		    iframe.style.width  = this.style.width;
 
-		    //iframe.style.height = this.style.height;
+		    iframe.style.height = this.style.height;
 
 		    // Replace the YouTube thumbnail with YouTube HTML5 Player
 		    this.parentNode.replaceChild(iframe, this);
 
 		  };
-	      }
+	   }
 	}
 
 	if(window.location.href.indexOf('prints.html') != -1 || window.location.href.indexOf('plugins.html') != -1 || window.location.href.indexOf('themes.html') != -1)
