@@ -80,14 +80,17 @@ window.onload=function(){
 			  simg.setAttribute("class", "z");
 			  simg.style="width:100%;height:100%";
 
-			  if(this.naturalWidth<700)
-			    $perc=40;
-			  else if(this.naturalWidth<900)
-			    $perc=35;
-			  else
- 			     $perc=25;
-
-  			    showimg.style="position:fixed;left:"+$perc+"%;top:25%;border:1px double red;box-shadow:-1px 1px 3px #000;padding:10px;background-color:#eee;overflow:auto;max-width:70%;max-height:60%";
+			   $mwidth='100';
+			  
+				$percW=(window.outerWidth-this.naturalWidth);
+			    if($percW>0) $percW=($percW/35);
+			    else $percW=0;
+			  
+				$percH=(window.outerHeight-this.naturalHeight);
+			    if($percH>0) $percH=($percH/100);
+			    else $percH=0;			    
+			  
+  			    showimg.style="position:fixed;left:"+$percW+"%;top:"+$percH+"%;border:1px double red;box-shadow:-1px 1px 3px #000;padding:10px;background-color:#eee;overflow:auto;max-width:"+$mwidth+"%;max-height:94%";
 
 
 		          showimg.insertAdjacentHTML('afterbegin','Zoom - Imagem "'+this.alt+'" <small>Clique nessa imagem sair</small><br><br>');
