@@ -13,15 +13,21 @@
   <meta name="author" content="Fabiano Santos - @fabianosantosnet">
 	
   <meta property="og:locale" content="pt, pt_BR, pt_PT">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
   <meta property="og:title" content="Artigos do Bludit CMS">
-  <meta property="og:site_name" content="bluditCMS">
-  <meta property="og:description" content="Artigos referente ao Bludit CMS">
+  <meta property="og:site_name" content="bluditCMS">	
+  <meta property="og:description" content="Artigos referente ao Bludit CMS">	
   <meta property="og:url" content="https://fabianosantosnet.github.io/bluditCMS/articles.html">
   <meta property="og:image" content="https://fabianosantosnet.github.io/bluditCMS/assets/logo-bludit-fb-art.png">  
   <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">  
-
+  <meta property="og:image:height" content="630">
+	
+  <meta property="article:author" content="fabianosantosnet">
+  <meta property="article:published_time" content="2020-11-15">
+  <meta property="article:modified_time" content="2021-07-25">
+  <meta property="article:section" content="Artigos, Dicas, Novos recursos">
+  <meta property="article:tag" content="segurança no bludit, CMS com NGINX">
+	
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="@fabianosantos_n">    
   <meta name="twitter:image" content="https://fabianosantosnet.github.io/bluditCMS/assets/logo-bludit-tw-art.png">
@@ -87,7 +93,8 @@
 		<h3 id="art2">Dicas de segurança</h3>
 		
 		<h4>Simples</h4>
-		<p>Após a instalação vá em <code>Administrar->Usuários->Adicionar Novo Usuário</code> e no campo usuário insira um nome bem diferente ao qual será utilizado apenas para administrar o BLUDIT (gerenciar usuários, plugins, temas, categorias e configurações básicas).</p>
+		<p>Após a instalação vá em <code>Administrar->Usuários->Adicionar Novo Usuário</code> e no campo usuário insira um nome bem diferente ao qual será utilizado apenas para administrar o BLUDIT (gerenciar usuários, plugins, temas, categorias e configurações básicas) e depois selecione a <code>Função</code> 'Administrador'.</p>
+			
 		<p>Vá em <code>Administrar->Usuários</code> clique em <i>admin</i> depois na aba Segurança e pressione o botão <i>Desativar usuário</i>. Para habilitá-lo novamente basta alterar a senha.</p>		
 		<p>Recomendado para senhas: use no mínimo 8 caracteres contendo maiúsculas, minúsculas, números e caracteres especiais. Caso tenha dificuldades sugiro utilizar um <a href="https://duckduckgo.com/?q=gerador+de+senhas">gerador de senhas</a>. Troque a senha algumas vezes ao ano.</p>
 		<p>Crie um novo usuário com função Autor ou Editor para gerenciar seus artigos (crie mais de um usuário dessas funções caso queira). <strong>Lembre-se de preencher as informações de apelido e nome diferentes do nome do usuário para que não tentem invadir seu sistema pois alguns temas mostram o nome de quem publicou o conteúdo.</strong></p>
@@ -111,6 +118,8 @@
 
 			<p>Remova do código a versão do CMS em <code>/bl-kernel/helpers/theme.class.php</code> onde encontrar '?version='.</p>
 			
+			<p>Também ao invés de criar outro usuário pra desativar o 'admin', pode-se alterar diretamente o usuário no arquivo <code>/bl-content/databases/users.php</code> na linha 3 "admin" por um nome de usuário diferente e na linha 4 o valor de nickname diferente de "Admin".</p>
+				
 			<p>Sempre utilize versões do PHP recentes ( pelo menos da 7.2 em diante ).</p>
 			
 			<p>Os servidores web Apache e NGINX são os mais utilizados atualmente, portanto escolher uma hospedagem com um menos conhecido também ajuda na proteção.</p>	
