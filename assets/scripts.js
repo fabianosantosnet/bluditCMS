@@ -65,9 +65,10 @@ window.onload=function(){
 	if(window.location.href.indexOf('prints.html') != -1 || window.location.href.indexOf('plugins.html') != -1 || window.location.href.indexOf('themes.html') != -1)
 	{
 		var imgz    = document.getElementsByClassName("z");
+		var len		= imgz.length;
 		var showimg = document.getElementById('showimg');
 
-		for (var i=0; i<imgz.length; i++)
+		for (var i=0; i<len; i++)
 		{
 		  var zz = imgz[i];
 
@@ -90,7 +91,7 @@ window.onload=function(){
 			    if($percH>0) $percH=($percH/100);
 			    else $percH=0;			    
 			  
-  			    showimg.style="position:fixed;left:"+$percW+"%;top:"+$percH+"%;border:1px double red;box-shadow:-1px 1px 3px #000;padding:10px;background-color:#eee;overflow:auto;max-width:"+$mwidth+"%;max-height:94%";
+  			    showimg.style="position:fixed;left:"+$percW+"%;top:"+$percH+"%;border:1px double red;box-shadow:-1px 1px 3px #000;padding:10px;background-color:#eee;overflow:auto;max-width:"+$mwidth+"%;max-height:94%;z-index:100";
 
 
 		          showimg.insertAdjacentHTML('afterbegin','Zoom - Imagem "'+this.alt+'" <small>Clique nessa imagem sair</small><br><br>');
