@@ -71,7 +71,7 @@
 		<p>Em Ajustes->Geral</p>
 		<ul>
 		<li><em>-&gt;Geral</em><br>Preencha as informações básicas como título do site, slogan<br><br></li>
-		<li><em>-&gt;Avançado</em><br>Altere o número de artigos que irá aparecer na página inicial, ordene o conteúdo (data ou posição), insira um email, sete páginas pré-definidas, altere URL da categoria e tag<br><br></li>
+		<li><em>-&gt;Avançado</em><br>Altere o número de artigos que irá aparecer na página inicial, ordene o conteúdo por data (padrão específico para blog) ou posição (mais voltado para site), insira um email, sete páginas pré-definidas, altere URL da categoria e tag<br><br></li>
 		<li><em>-&gt;SEO</em><br>Defina o padrão para os mecanismos de buscas (já otimizada)<br><br></li>
 		<li><em>-&gt; Social Networks (Redes Sociais)</em><br>Altere as redes sociais do usuário logado <span id="redes">(Twitter, Facebook, CodePen, Instagram, GitLab, GitHub, LinkedIn, Mastodon, Dribble e VK)</span><br><br></li>
 		<li><em>-&gt;Imagens</em><br>Defina a altura, lagura e qualidade das miniaturas das imagens<br><br></li>
@@ -390,7 +390,7 @@
 
 		<h5 id="hook">Hooks</h5>
 
-		<p>O sistema disponibiliza os chamados <a href="https://docs.bludit.com/en/plugins/hooks-list">ganchos</a>, que são funções prestabelecidas ao qual são sobrescritas nos plugins ou temas e são invocados diretamente no tema.</p>
+		<p>O sistema disponibiliza os chamados <a href="https://docs.bludit.com/en/plugins/hooks-list">ganchos</a>, que são funções prestabelecidas ao qual são implementadas nos plugins e são invocados diretamente no tema.</p>
 
 		<p>No exemplo abaixo as funções serão automaticamente executadas nesses 3 locais de um template (tema) fictício: <em>siteHead</em> (dentro da tag head), <em>siteBodyBegin</em> (logo após a tag body) e <em>siteBodyEnd</em> (antes do término da tag body). Isso significa que todos plugins ativos que implementem o gancho será chamado naquele determinado local.</p>
 

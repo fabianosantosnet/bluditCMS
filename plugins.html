@@ -82,9 +82,9 @@
 
 			<p>As extensões desativadas são: </p>			
 				<ul>					
-					<li>API - interface programável utilizada por desenvolvedores que queriram integrar o CMS em seus projetos;</li>
-					<li>Backup - considere ativar e fazer backups regulares, inclusive salvando em outro servidor;</li>
-					<li>Categories - mostra as categorias na barra lateral;</li>
+					<li>API - interface programável utilizada por desenvolvedores que queiram integrar o CMS em seus projetos;</li>
+					<li>Backup - faz backup quanto restore da pasta /bl-content;</li>
+					<li>Categories - mostra as categorias na barra lateral do site;</li>
 					<li>Custom fields parser - defina o código para os campos personalizados e analisa o conteúdo da página;</li>
 					<li>Disqus - ativa o comentário para o artigo (necessário prévio registro no <a href="https://disqus.com/">site</a>);</li>
 					<li>EasyMDE - editor para quem gosta de usar o MarkDown <a href="https://blog.da2k.com.br/2015/02/08/aprenda-markdown/">[+]</a></li>
@@ -93,18 +93,20 @@
 					<li>Links - visualize links pré configurados na lateral da página;</li>
 					<li>Maintenance mode - coloque o site no modo manutenção e mostre uma mensagem padrão;</li>
 					<li>Navigation - um menu de navegação com subpáginas para a lateral do site/blog (sidebar);</li>
-					<li>Open Graph - protocolo que define alguns padrões para descrição de conteúdo web através das meta tags <a href="https://ogp.me/">[+]</a>;</li>
+					<li>Open Graph - são meta tags específicas para compartilhamento de publicação em sites como Facebook ou outra rede que entenda as regras do protocolo <a href="https://ogp.me/">[+]</a>;</li>
 					<li>Remote Content - provê um jeito fácil de sincronizar conteúdo do GitHub e similares e sincronizar com o Bludit;</li>
 					<li>RSS Feed - gera um conteúdo feed de seu site com padrão <code>https://seuSite.com.br/<em>rss.xml</em></code>;</li>
 					<li>Search - implementa uma caixa de pesquisa para busca no site/blog;</li>
 					<li>Sitemap - gera um sitemap.xml do site/blog para ser utilizado em mecanismos de busca;</li>
 					<li>Static Pages - menu de navegação com as páginas estáticas criadas;</li>					
 					<li>Tags list - mostra todas as tags no painel lateral (sidebar);</li>
-					<li>Twitter Cards - define pequenos blocos que pode ser disponibilizado fotos, vídeos e tweets ajudando no trafego da sua página web;</li>
+					<li>Twitter Cards - trata-se de uma versão do Open Graph mas específica para o Twitter que implementa meta tags que descrevem o conteúdo da postagem;</li>
 					<li>Version - mostra a versão do Bludit na lateral do painel de administração e informa quando há novas atualizações;</li>
 			</ul>
 			
 			<p>Dica: desative o plugin TinyMCE, e ative os plugins Backup, Categories, Hit Counter, Links, Navigation, RSS Feed, Search, Sitemap, Static Pages e Tags list. Alguns deles são programados, dependendo do tema, para aparecerem em <a href="func.html#hook">determinados locais</a> ou no sidebar (barra lateral), e você pode alterar a posição em  <em>Plugins->Alterar as posições dos plugins</em>. Verifique qual é o mais interessante para o modelo de seu site/blog e desative os que não usar.</p>
+			
+			<p>Caso queira ignorar alguns plugins padrões, substitua pelos vários melhorados que criei: Header Content (substitui Meta Canonical, Robots, RSS e Maintenance mode - e adiciona Keywords e Description, Author, Copyright, Bloco CSS e Notificação de Navegador); FS SEO (substitui Twitter, OpenGraph e Sitemap); FS Essential Blocks (substitui Search, Tags e Categories - e adiciona o Caixa de Código); FS Page Menu (substitui Links, Navigation e Static Pages).</p>
 			
 			<h4 id="plgrecommended">Plugins recomendados</h4>
 			
@@ -199,10 +201,10 @@
 			
 		<p>Verificando o código do pluginAbout abaixo (arquivo plugin.php), temos a noção de alguns padrões:</p>
 		<ul>
-			<li>O plugin o padrão de nome plugin<strong>Nome</strong> nesse caso <strong>Nome</strong> é About ficando pluginAbout que herda da classe Plugin</li>
+			<li>O padrão de nome plugin<strong>Nome</strong> nesse caso <strong>Nome</strong> é About ficando pluginAbout que herda da classe Plugin</li>
 			<li>init() - Método padrão para iniciar as propriedades</li>
 			<li>form() - Método padrão que mostrará o conteúdo de configuração do plugin (link Ajustes)</li>				
-			<li>siteSidebar() - Método sobrescrito - chamado de <a href="func.html#hook">hook</a>, que será chamado se o modelo (template) implementar essa função, esse é o conteúdo que irá aparecer para o usuário quando acessa a página, note também as classes css padrões</li>					
+			<li>siteSidebar() - Método implementado - chamado de <a href="func.html#hook">hook</a>, que será chamado se o modelo (template) executar esse gancho (hook), esse é o conteúdo que irá aparecer para o usuário quando acessa a página, note também as classes css padrões</li>					
 		</ul>
 			
 <code class="minilight">&lt;?php
