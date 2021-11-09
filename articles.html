@@ -24,7 +24,7 @@
 	
   <meta property="article:author" content="fabianosantosnet">
   <meta property="article:published_time" content="2020-11-15">
-  <meta property="article:modified_time" content="2021-07-25">
+  <meta property="article:modified_time" content="2021-11-09">
   <meta property="article:section" content="Artigos, Dicas, Novos recursos">
   <meta property="article:tag" content="segurança no bludit, CMS com NGINX">
 	
@@ -119,7 +119,8 @@
 			<p>Remova do código a versão do CMS em <code>/bl-kernel/helpers/theme.class.php</code> onde encontrar '?version='.</p>
 			
 			<p>Também ao invés de criar outro usuário pra desativar o 'admin', pode-se alterar diretamente o usuário no arquivo <code>/bl-content/databases/users.php</code> na linha 3 "admin" por um nome de usuário diferente e na linha 4 o valor de nickname diferente de "Admin".</p>
-				
+			<p>Oculte, o nome do CMS (remova a última linha em <code>/bl-kernel/boot/rules/99.header.php</code>), do PHP e do servidor. Inspecione o código do site ao ativar um tema ou plugin se não informa o nome do CMS em comentários ou meta tags.</p>
+			
 			<p>Sempre utilize versões do PHP recentes ( pelo menos da 7.2 em diante ).</p>
 			
 			<p>Os servidores web Apache e NGINX são os mais utilizados atualmente, portanto escolher uma hospedagem com um menos conhecido também ajuda na proteção.</p>	
