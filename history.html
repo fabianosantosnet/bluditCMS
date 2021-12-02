@@ -1,0 +1,222 @@
+<!doctype html>
+
+<html lang="pt">
+<head>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+
+  <title>Bludit CMS em Língua Portuguesa | Histórico</title>
+
+  <meta name="description" content="Histórico referente ao Bludit CMS">  
+  <meta name="author" content="Fabiano Santos - @fabianosantosnet">
+	
+  <meta property="og:locale" content="pt, pt_BR, pt_PT">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Histórico do Bludit CMS">
+  <meta property="og:site_name" content="bluditCMS">
+  <meta property="og:description" content="Histórico referente ao Bludit CMS">
+  <meta property="og:url" content="https://fabianosantosnet.github.io/bluditCMS/history.html">
+  <meta property="og:image" content="https://fabianosantosnet.github.io/bluditCMS/assets/logo-bludit-fb.png">  
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">  
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@fabianosantos_n">    
+  <meta name="twitter:image" content="https://fabianosantosnet.github.io/bluditCMS/assets/logo-bludit-tw.png">
+
+  <link rel="canonical" href="https://fabianosantosnet.github.io/bluditCMS/">
+  <link rel="stylesheet" href="assets/styles.css">  
+
+  <script src="assets/scripts.js" defer></script>
+
+  </head>
+  <body>
+<div class="parent">
+	<div class="top">
+	      <header>
+      	        <img src="assets/logo.png" alt="Logo">
+				<h1><a href="https://fabianosantosnet.github.io/bluditCMS/">Bludit CMS</a></h1>
+				<p>Informações referente ao Bludit CMS em lingua portuguesa</p>
+				<p class="view"><a href="https://github.com/fabianosantosnet/bluditCMS">GitHub deste site</a></p><!-- https://git.fabianosantos.net -->
+	      </header>
+	</div>
+
+	<div class="menu">
+		<div class="links"><!-- dinamyc links --></div>
+	</div>
+
+	<div class="content">
+	    <section>
+
+		<h2>Bludit CMS | Histórico</h2>
+
+		<h3>Visão Geral</h3>
+			<p>Com Bludit, crie seu próprio site ou blog em segundos.<br>Sistema rápido, seguro e de arquivo simples (do termo em inglês flat-file CMS).</p>
+			<p>Não requer banco de dados !<br>Não gaste em hospedagem cara, hospedagem compartilhada é o suficiente devido a sua leveza.</p>
+			
+		<h3>Linha do tempo</h3>	
+		<div id="timeline">
+			<div class="y">				
+				<h4>2015</h4>			
+				<ul>
+					<li>Setembro - já implementado instalador que solicita usuario senha e email;
+						na v0.1 já tinha a maioria das funcionalidades: criação de página estática e normal.
+						Usuários: administrador e editor, URL amigável, filtragem para postagem, páginas e tags e utilizava o MarkDown como padrão para o editor;
+						disponível em 9 idiomas; 1° tema de nome Pure, e 6 plugins (Disqus, Maintenance Mode, Open Graph, Page list, Simple MDE e  Tag list);
+						na versão 0.2 foi introduzido o idioma Português Brasileiro.</li>
+					
+					<li>Outubro - A estrutura das pastas eram: admin, content, kernel, languages, plugins e themes;
+						na versão 0.4 beta 1 recupera a senha via email e adição de página pai e filha (apenas no Páginas), além do item posição, adição do plugin Google Tools;
+						na v0.5 melhorias no código de acesso via email e no sistema de página, atualização do plugin SimpleMDE e JQuery.</li>
+					
+					<li>Novembro - 
+						na v0.6 b1 foi adicionado o novo sistema de carregamento de imagem e suporte para o SimpleMDE, e adicionado o TinyMCE; 
+						melhorias no gerenciador de usuario e no instalador;
+						na v0.6.1  e 6.2 suporte para built in server, e melhoria para servidores web windows, formatos de datas para posts, suporte para o Parsedown extra, e novo tema Future Imperfect, imagem de perfil de usuario melhorada, adicionado o plugin About;
+						movido a pasta admin para kernel;
+						o tema padrão Pure e a interface do painel de controle já estava com a aparencia melhor que a 0.4;  
+						na versão 0.7 beta1 foi habilitado o TinyMCE como editor padrão, melhorado token CSRF e suporte a 15 idiomas.
+					</li>
+					
+					<li>Dezembro - Lançada versão 0.7 com melhorias no sistema de URL, escolha entre TinyMCE (padrão HTML) ou SimpleMDE (markDown); token de segurança aprimorado CSRF; painel de administração mais responsivo para celulares e tablets.</li>					
+				</ul>
+			<div>
+				
+			<div class="y">			
+				<h4>2016</h4>
+				<ul>
+					<li>Janeiro - 
+						na versão 1, introduzido o arquivo metadata.json na pasta bl-plugins e bl-themes ('inserido bl-' nas pasta padrões), melhoria no perfil de usuario e imagem do perfil, novo plugin posts recentes (lastest_posts), rss e sitemaps
+						introdução dos hooks (ganchos), novo objeto User para postagens e páginas;
+						imagem de capa para artigos e postagens além de novo sistema de upload, novo sistema de tag com preenchimento automático (auto complete), SimpleMDE como editor primário, novo filtro para mostrar o blog quando você setar a página como página padrão;
+						novos temas Blogme e Future imperfect;
+						compatibilidade com PHP 5.3;
+						melhorias na paginação.
+					</li>
+					<li>Fevereiro - na v1.1.2 diversas correções de bugs e tags ordenadas alfabeticamente.</li>
+					<li>Maio - na v1.3 beta 1 novo plugin API (não 100% funcional), correção de problemas em datas e tags,  melhorias  em páginas ordem/sort; novo tema Log, painel melhorado e mais responsivo, melhor performance no sistema.</li>
+					<li>Junho - Melhoria no plugin API, e melhoria na URL amigável; Atualização de idiomas, datas e tags, coração do sistema, css e melhorias nos plugins Sistema, Opengraph e SimpleMDE; Inserido na v1.4 a flag para identificar compatibilidade em temas e plugins (não lista quando não tem compatibilidade); Melhorias no core do Bludit.</li>
+					<li>Setembro - v1.5 beta 1 a 3 - dashboard alterado para barra lateral; API plugin e core do Bludit melhorado.</li>
+					<li>Outubro - Lançado v1.5 com as correções dos betas; Atualizados: tema Log, idiomas, core do Bludit, plugins API, instalador, painel de controle; Corrigido bugs: quando não existe página, ao fazer upload na imagem do perfil, nos plugins Sitemap e RSS e atualização de idioma.</li>
+				</ul>
+			<div>
+			
+			<div class="y">			
+				<h4>2017</h4>
+				<ul>
+					<li>Maio - v1.6 beta 1 a 1.6.1; Adição: UUID e tempo de leitura para posts e páginas, novo layout para plugins e temas; Melhorias: sistema de imagens para Bludit, Paginação, mudança visual nas opções de novas páginas e posts; Atualizações: instalador, jQuery, ParseDown, dicionário de idioma; Diversos bugs corrigidos;</li>
+					<li>Junho - 1.6.2 pequenas correções; compatibilidade de tipos para plugins;</li>
+					<li>Julho - Bludit 2.0 alpha 1 a 3; Temas novos: Diego, Docs, Editorial, Kernel Panic, Massively, Phantom; Novos plugins: Fixed pages, Links, Menu; Inserido: Website ou blog order: por posição ou data; Em configuraçoes avançado URL filters foi removido 'blog' - consta /, tag e categoria;</li>
+					<li>Agosto - v2.0 beta 1; Alterações: Resposta do protocolo de código HTTP corrigida; Web hook corrigido para plugins, Paginator melhorado, Corrigido Posição do plug-in (apenas via codigo); Corrigido o regex para mudar em relação ao url absoluto de imagens carregadas; URL amigável do conteúdo quando você não define um título; Plugin Tinymce atualizado, este plugin usa o CDN do Tinymce; Imagem da capa externa; Melhora em temas e plugins; Correções de bugs; Adição do tema: Klean, Lingonberry; Adição dos plugins Categories, Twitter Cards, Ping.</li>
+					<li>Setembro
+						<ul>
+							<li>v2.b2 - Alterações: Remoção de tags HTML ao obter o título do conteúdo, se o título estiver vazio; Mudanças no painel, atualizações de CSS e JS; Mudanças no sistema de idioma, o local pode ser incluído no dicionário do idioma; O usuário pode definir a página 404 em Configurações avançadas, por padrão, a página 404 é gerada instantaneamente com um texto padrão; Melhora na API; Correções ao analisar o conteúdo do arquivo index.txt; Melhora no gerenciamento de conteúdo; Dicionários de idiomas atualizados; Tema Docs atualizado;</li>
+							<li>v2b3 - Filtro /blog/ adicionado; Dicionário de inglês atualizado; Melhora no roteador de URL; Correção de bugs;</li>
+							<li>v2b4 - Correções de bugs no roteador de URL, às vezes página retornada não encontrada; Dicionários de idiomas atualizados com algumas palavras que faltavam; Dicionário russo atualizado; Correções de bugs em diferentes temas; As páginas fixas agora são páginas estáticas; Plugin API atualizado, trabalhando na documentação.</li>
+							<li>v2b5 - Correções de bugs no roteador de URL; Plugin API, escrever funções, criar uma página, editar uma página e excluir uma página; Correções em páginas de gerenciamento, paginator.</li>
+							<li>v2b6 - As páginas estáticas são ordenadas por posição; API melhora; Dicionário do idioma inglês atualizado; Pequenas correções de bugs.</li>							
+						</ul>
+					</li>
+					
+					<li>Outubro - v2 lançado e correção na v2.1; Dicionários de idiomas atualizados; Correções de funções de usuário no painel; Melhora ao obter o conteúdo do arquivo; Pequenas mudanças nas categorias de plugins; Páginas do plug-in renomeadas para o conteúdo mais recente do plugin; Adicionado a midia social Codepen; Novo tema da history; Postagem e páginas agora são conteúdo; Categorias Adicionadas; Notificações e Syslog para eventos; API renovada; Editor de Markdown SimpleMDE e Editor de HTML TinyMCE; Diversas atualizações de bugs.</li>
+					
+					<li>Novembro - Atualizações de segurança para nova Tag e Categoria; Correção de bugs do painel de controle em smartphones, em paginação e temas, melhora no Helper de Filesystem, além de atualização de idiomas e algumas versões do PHP.</li>
+					
+					<li>Dezembro - v2.1 função de 'lembrar me' na tela de login que armazena a sessão por 30 dias; Novo plugin Backup (crie, restaure e baixe); Nova classe para Categorias e Tags; Melhoria no suporte a datas multi-idiomas; Atualizações de idiomas e novo formato de JSON para autores; Bug corrigido, compatibilidade com PHP 7.2; Melhorias no core do Bludit.</li>
+				</ul>
+			<div>
+				...
+<!--									
+			<div class="y">			
+				<h4>2018</h4>
+				<ul>
+					<li>Janeiro - </li>
+					<li>Fevereiro - </li>
+					
+					<li></li>
+					<li></li>					
+				</ul>
+			<div>
+
+			<div class="y">			
+				<h4>2019</h4>
+				<ul>
+					<li></li>
+					<li></li>
+				</ul>
+			<div>
+				
+			<div class="y">			
+				<h4>2020</h4>
+				<ul>
+					<li></li>
+					<li></li>
+				</ul>
+			<div>
+				
+			<div class="y">			
+				<h4>2021</h4>
+				<ul>
+					<li></li>
+					<li></li>
+				</ul>
+			<div>				
+
+					<li>
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>								
+					</li>
+					
+					<li></li>				
+			-->
+		</div>
+			
+			
+		
+		
+<!--
+<h4>Visão Geral</h4>
+<p></p>
+		<code class="minilight">/bl-content/    &lt;-- Base de dados e imagens enviadas
+/bl-kernel/     &lt;-- Coração do Bludit
+/bl-languages/  &lt;-- Contém os arquivos de idioma em formato JSON codificados em UTF8.
+                    São arquivos a nível global do Bludit, isto é, traduzem o CMS.
+                    Para o portugues do Brasil temos o pt_BR.json. Estudando as chaves,
+		    você pode colocar também as traduções em seus plugins e temas.
+
+/bl-plugins/    &lt;-- Extensões
+/bl-themes/     &lt;-- Temas</code>
+
+
+		<p class="note">Lembre-se que nem todo plugin ou tema conterá esses hooks (ganchos). Trata-se um padrão do CMS que o desenvolvedor poderá ou não implementar em seu projeto.</p>
+
+		<code class="minilight">&#x3C;?php Theme::plugins(&#x27;siteSidebar&#x27;) ?&#x3E;</code>
+
+	
+			<p>Outras informações<br><small>
+				https://docs.bludit.com/en/content/content-basics<br>
+				https://docs.bludit.com/en/developers/developers-basics<br>
+				https://docs.bludit.com/en/developers/predefined-variables<br>	
+				https://github.com/bludit/bludit/blob/master/bl-kernel/boot/init.php<br>
+				https://github.com/bludit/bludit/blob/master/bl-kernel/boot/variables.php<br>
+				https://github.com/bludit/bludit/blob/master/bl-kernel/boot/rules/69.pages.php				
+			</small></p>
+-->
+
+	      </section>
+		</div>
+
+		<div class="bottom">
+		  <footer>
+				<p>Projeto mantido por <a href="https://github.com/fabianosantosnet"><i class="fab fa-github"></i> fabianosantosnet</a><br>
+				   <small>Hospedado no GitHub Pages &mdash; Tema criado por <a href="https://www.fabianosantos.net">fabianosantos.net</a></small></p>
+				<p><small>Tecnologias <i class="fab fa-css3"> CSS3</i> - <i class="fab fa-html5"> HTML5</i> - <i class="fab fa-js-square"> JavaScript</i> - <i class="fab fa-font-awesome-flag"> Fonte Awesome</i></small></p>
+		  </footer>
+		</div>
+	</div>
+  </body>
+</html>

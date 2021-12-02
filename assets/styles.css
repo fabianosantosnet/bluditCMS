@@ -108,6 +108,12 @@ color:brown;border-left:10px outset brown;margin-top:30px;
 
 :target {  background-color: #ffb }
 
+#timeline .y li
+{
+  margin:1rem 0;
+  color:#555 !important;
+}
+
 .zoomimg {margin-left:10px}
 .zoomimg > div img {width:200px;height:100px;cursor:pointer}
 .content h5 {font-size:13px;border-bottom:1px double #f5f5f5;color:#999}

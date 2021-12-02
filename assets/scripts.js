@@ -106,6 +106,7 @@ window.onload=function(){
 		'<ul>'+
 			'<li><a href="./index.html"><i class="fas fa-home"></i> Principal</a></li>'+
 			'<li><a href="./install.html" title="Instalação e atualização do CMS"><i class="fas fa-link"></i> Instalação</a></li>'+
+			'<li><a href="./history.html" title="Histórico do Bludit"><i class="fas fa-link"></i> Histórico</a></li>'+	
 			'<li><a href="./videos.html"><i class="fas fa-link"></i> Vídeos</a></li>'+
 			'<li><a href="./prints.html"><i class="fas fa-link"></i> Snapshots</a></li>'+
 			'<li><a href="./func.html"><i class="fas fa-link"></i> Funcionamento</a></li>'+
