@@ -127,19 +127,88 @@
 					<li>Dezembro - v2.1 função de 'lembrar me' na tela de login que armazena a sessão por 30 dias; Novo plugin Backup (crie, restaure e baixe); Nova classe para Categorias e Tags; Melhoria no suporte a datas multi-idiomas; Atualizações de idiomas e novo formato de JSON para autores; Bug corrigido, compatibilidade com PHP 7.2; Melhorias no core do Bludit.</li>
 				</ul>
 			<div>
-				...
-<!--									
+
+						
 			<div class="y">			
 				<h4>2018</h4>
 				<ul>
-					<li>Janeiro - </li>
-					<li>Fevereiro - </li>
+					<li>Janeiro - v2.1.1 a v2.2.1: Correção de bugs no plugin Static, datas, traduções, painel de controle; Novo plugin HTML Code para insirir código em 3 áreas header, body ou footer; Adicionado método que retorna a imagem miniatura da imagem de capa e melhorado gerenciamento de conteúdo para subpages; Extensão TinyMCE atualizada.</li>
 					
-					<li></li>
-					<li></li>					
+					<li>Fevereiro - v2.3 b1: Novos temas: Blog X e Alternative; novo recurso para mudar a posição dos plugins arrasta-e-solta; melhora na performance da página pai e filha; nova função de leitura do tempo em minutos que leva para ler uma página; API de plug-in, retorna imagem de capa e correções de bugs.</li>					
+					
+					<li>Março - Lançado versão estável do v2.3.0 a 2.3.3; Plugins removidos Menu e Latest content e incluído no lugar Navigation; Incluído botão para deletar no plugin Backup; no Plugin API implementou o retorno da imagem de capa; Scroll down ao ativar plugin; Novos ganchos (hooks) para o painel de administração.</li>
+					
+					<li>Abril - v2.3.4: conteúdo do tipo Sticky (destacado) adicionado; atualizações de idioma e css em temas.</li>
+
+					<li>Junho - Lançamento do Bludit 3.0.0 alpha 1: Mudança na interface; Editor com suporte a markdown e HTML; Perfis de Usuarios: Administrador, Editor, Moderador e 27 idiomas.</li>
+					<li>Julho - Lançamento do Bludit 3.0.0 alpha 2, alpha 3,
+						<ul>
+							<li>na alpha 4 teve a implementação da sessão na área administrativa além de melhora na criação de conteúdo;</li>
+							<li>
+						Na alpha 5 - o título agora fica armazenado no banco de dados e não no arquivo principal da página, apenas o conteúdo é armazenado no arquivo index.txt; mudanças em nomes de variáveis e de objetos, isto é, todos objetos padrão criados por Bludit agora são minúsculas: $Url é $url, $Page alterado para $page, $Site é $site e o array $pages agora é $content.<br />
+								<code>foreach($content as $page){	$page->title(); }</code>								
+								<br /><br />
+								O status do conteúdo agora é chamado de type.<br />
+								<code>foreach($content as $page) {if($page->type() == 'static') $x=1;}</code>
+							</li>
+						</ul>
+						
+						Lançamento da versão 3.0.x beta:
+						<ul>
+							<li>beta 1 - novo painel de administração para Celulares, tablets e desktops; Novo gerenciador de mídia; Banco de dados redefinido para melhorias de desempenho; Plug-in para estatísticas simpleStats 100% compatível com GDPR; Novos ganchos (hooks) para plugins (dashboard e adminSidebar); Função de salvamento automático; Recursos de SEO; Novo papel tipo reader (leitura) para usuários; Mudanças no perfil do usuário; Permissão para ativar ou desativar o Unicode na URL; Atualizações de temas; Campo template para conteúdo; Suporte total para Bootstrap e TinyMCE 4.8.0.</li>							
+						</ul>
+					
+						</li>
+					
+					<li>Agosto - (...)
+					
+						<ul>						
+							<li>beta 2 - Recursos novos: Adicionado barra de navegação para celulares, descrição para categorias, renomeação de variáveis predefinidas, renomeação de classe,  idiomas atualizados, plugin API melhorado e correções de bugs.</li>
+						</ul>
+						
+						Bludit v3.0.0 Release Candidate 1
+						<ul>						
+							<li>TinyMCE como o editor padrão; Dicionário de idioma atualizado; Correção de bugs: remoção de caracteres especiais da URL, upload de imagens, plugin RSS e Sitemap.</li>
+						</ul>
+						
+					</li>
+					
+					<li>Setembro - (...)<br /><br />
+					
+						Bludit v3.0.0 Release Candidate 2
+						<ul>						
+							<li>Redirecione as páginas com uma barra final para o link original - Exemplo <code>https://example.com/my-dog/</code> redireciona para <code>https://example.com/my-dog</code>; Painel de administração melhorado para conteúdo de páginas pais e filhos; Correção de bug, removido quebras de linha ao gerar a chave do conteúdo; Frases ausentes adicionadas aos dicionários.</li>
+						</ul>
+						
+						Bludit v3.0.0 Release Candidate 3
+						<ul>						
+							<li>Melhora no plugin Simple Stats; Novo diretório workspaces para plugins; Adição da rede social Mastodon à lista; Diversas correções de bugs: Erro no Google Sitemap, geração da URL, chamada para função indefinida, plugin Navigation repetia páginas filhas como pais, filtro de administração.</li>
+						</ul>	
+						
+						v3.0.0 estavel lançada
+						<ul>						
+							<li>São muitas alterações desde a versão v2.3.4, incluindo alpha, beta e release candidates: São muitas alterações desde a versão v2.3.4, incluindo alpha, beta e release candidates. Aqui está uma lista de novos recursos: 
+Móveis responsivos, aproveite o Bludit em seu celular, tablet ou desktop; Media Manager, novas interfaces para gerenciar suas fotos em um único lugar; Painel do administrador renovado; Melhorias de desempenho para a criação de grandes sites com mais de 10.000 páginas; TinyMCE como o editor padrão, você pode escolher mais editores na seção de plug-ins; As categorias suportam a descrição e os modelos; Suporte do campo templates para páginas; Melhorias no plugin da API; Permiti ou não Unicode no sistema; Melhorias para SEO.
+							</li>
+						</ul>	
+					</li>	
+					
+					<li>Outubro
+					
+						<ul>
+							<li>Lançado Bludit v3.1.0: incusão do plugin Search, imagens por páginas, botão para remoção da imagem de capa; permiti página estatica na homepage. TinyMCE: novo estilo de editor e adicionado o plugin unlink.</li>
+							<li>Bludit v3.2.0: Novo plugin Hit Counter que mostra as visitas na barra lateral; Pequenas alterações visuais no editor e na seção conteúdo; Suporte para editores que trabalham em elementos editáveis DIV, por exemplo QuillJs ou Tinymce Inline. Alteração na variável de $Language para $language. Correções de bugs.</li>
+							<li>Bludit v3.3.0: Alterado - interface aprimorada ao criar ou editar conteúdo, barra lateral com opções. Plugin TinyMCE atualizado; Correções de bug no plugin Search, modificado WHERE_AM_I = 'search'; Correções de bugs em fotos de perfil </li>
+						</ul>	
+					</li>
+					
+					<li>Novembro - versão 3.4: Notificação do painel após a atualização do Bludit; Melhora na interface, os botões Salvar e Cancelar agora ficam no canto superior direito; Nova interface para o perfil do usuário, também a função do editor pode alterar seu próprio perfil; Corrigido alguns bugs.</li>
+					
+					<li>Dezembro - Bludit v 3.5: Interface melhorada no painel de administração; Alteração no cache quando o usuário muda a foto do perfil; O usuário pode definir largura, altura e qualidade das miniaturas em Configurações &gt; Geral gt; Imagens; Correções de bug do plugin OpenGraph e adicionado ID de APP do Facebook; Melhora o plugin de Search com o algoritmo Fuzz.</li>
 				</ul>
 			<div>
-
+				...
+<!--			
 			<div class="y">			
 				<h4>2019</h4>
 				<ul>
