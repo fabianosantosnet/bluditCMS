@@ -204,19 +204,49 @@ Móveis responsivos, aproveite o Bludit em seu celular, tablet ou desktop; Media
 					
 					<li>Novembro - versão 3.4: Notificação do painel após a atualização do Bludit; Melhora na interface, os botões Salvar e Cancelar agora ficam no canto superior direito; Nova interface para o perfil do usuário, também a função do editor pode alterar seu próprio perfil; Corrigido alguns bugs.</li>
 					
-					<li>Dezembro - Bludit v 3.5: Interface melhorada no painel de administração; Alteração no cache quando o usuário muda a foto do perfil; O usuário pode definir largura, altura e qualidade das miniaturas em Configurações &gt; Geral gt; Imagens; Correções de bug do plugin OpenGraph e adicionado ID de APP do Facebook; Melhora o plugin de Search com o algoritmo Fuzz.</li>
+					<li>Dezembro - Bludit v3.5: Interface melhorada no painel de administração; Alteração no cache quando o usuário muda a foto do perfil; O usuário pode definir largura, altura e qualidade das miniaturas em Configurações &gt; Geral gt; Imagens; Correções de bug do plugin OpenGraph e adicionado ID de APP do Facebook; Melhora o plugin de Search com o algoritmo Fuzz.</li>
 				</ul>
 			</div>
-				...
-<!--			
+
 			<div class="y">			
 				<h4>2019</h4>
 				<ul>
-					<li></li>
-					<li></li>
-				</ul>
+					<li>Janeiro
+						<ul>
+							<li>v3.6 - Logotipo do site, carregue seu próprio logotipo, você pode obter a URL absoluta da imagem com $site->logo(); Mostre uma mensagem de alerta quando estiver editando conteúdo e estiver programado; Redireciona do '/blog' para '/blog/' no roteador (router); No modo DEBUG, você pode definir INFO ou TRACE para a proposta de depuração (por padrão é desabilitado); Uma maneira fácil de selecionar se o conteúdo é Publicar ou Rascunho (com a possibilidade de voltar a página publicada como rascunho); Remova aspas simples ou duplas do nome do arquivo quando o usuário fizer upload de imagens para evitar aspas de escape na IU; Agora você pode definir uma página 404 não encontrada nas configurações; Compatibilidade com PHP v5.3 no plugin Search.</li>
+							
+							<li>v3.7 - Novo plugin para URLs canônicos (Canonical); O plugin de HTML Code suporta a área administrativa, você pode inserir código HTML, JavaScript ou CSS; Botão do plugin Remote Content adicionado para acionar o webhook; Para o plugin Search foi adicionado evento para a tecla enter e opção para permitir ao usuário mostrar ou ocultar o botão de pesquisa; Plugin Disqus atualizado, você pode habilitar ou desabilitar o Disqus em diferentes tipos de páginas.</li>
+
+					</ul>
+					
+					</li>
+					
+					<li>Fevereiro
+						<ul>
+							<li>v3.8 - No Gerenciador de mídia (Media Manager) foi adicionado alerta quando o tipo de arquivo não é compatível, também alerta do tamanho máximo de arquivo permitido pelo PHP, além de respostas ruins do AJAX; Incluído o header 'X-Powered-By: Bludit'; Incluído '&lt;meta name="generator" content="Bludit"&gt;' nos temas padrão (BlogX e alternative); Função JavaScript incluída para usar o Bludit sem um editor de HTML, apenas a com área de texto; TinyMCE agora permite a inclusão de código JavaScript para códigos incorporados, como Google Maps, YouTube, Tweets, etc; Adiçao do lastBuildDate ao feed RSS xml; Para API, novos endpoint /api/tags para obter todas as tags no sistema, e /api/tags/&lt;key&gt; para obter informações sobre a tag e as páginas relacionadas a ela, o /api/pages para filtrar a lista de páginas por publicada, rascunho, estático, programada, não marcado (sem tag); Correção de diversos bugs e atualizações em traduções.</li>
+							<li>v3.8.1 - Adicionado suporte para PHP 5.6 ou superior; Idioma Espanhol e Persa atualizado; na API foi incluido o campo slug e tags para páginas e novo método para obter o token; Plugin Search inclui páginas estáticas e fixas; Categorias incluem páginas estáticas e fixas; Mapa do site inclua páginas fixas; Logs quando o json não pode ser decodificado; Algumas correções.</li>
+						</ul>
+					</li>
+					
+					<li>Maio
+						<ul>
+							<li>v3.9.0 beta 1 - 
+No Gerenciador de mídia (Media Manager) foi adicionado verificação do tamanho e da extensão dos arquivos antes de fazer o upload e alerta para o usuário, além disso, suporte para arrastar e soltar para imagens, otimização de código e interface de usuário aprimoradas. Habilite ou desabilite o analisador Markdown nas configurações, a constante MARKDOWN_PARSER é true se habilitada. Novo conjunto de ícones Line Awesome com suporte para Font Awesome, você pode usar o mesmo nome de Font-Awesome fa fa-&lt;icon&gt;. Criação de diretório de links simbólicos ao fazer upload de imagens para uma página específica, Ex: bl-content/uploads/pages/&lt;page-key&gt;. Página de visualização implementada. Quando você cria uma nova página e define um pai (parent), a página obtém o tipo da pai (parent). Gerenciador de plugins melhorado, filtro habilitado e desabilitado e função de pesquisa. Nova função Autor (Author) que permite ao usuário apenas editar seu próprio conteúdo. Gerenciador de conteúdo aprimorado, função de pesquisa. Suporte para upload de imagens e alterar configurações via API.</li>
+							
+							<li>v3.9.0 - incluindo alterações da beta anterior... Alterado o verificador de versão no instalador para a versão PHP para 5.6. Ícones ausentes corrigidos no painel de administração. A aba de salvamento automático em Conteúdo é exibida apenas quando há algum item. SimpleMDE removido e substituído por EasyMDE.</li>
+							<li>v3.9.1 - Atualizações de idioma; Impedimento de cache no TinyMCE 5; Formato SVG incluído no gerenciador de mídia; Algumas correções de bugs: evita que não administradores alterem a senha de outros usuários, evita que o plugin Disqus apareça em página não encontrada, ao fazer upload de imagens no PHP 5.6.</li>
+						</ul>
+					</li>
+					
+					<li>Junho - v3.9.2 - Incluido na API os campos date (ao obter uma data de página), dateRaw e username (nome de usuário). Correção em idiomas, nos tema BlogX e Alternative.</li>
+										
+					<li>Outubro - 3.10.0a - Suporte para campos personalizados (custom fields); Novo plugin analisador de campos personalizados (custom fields parser); Novo assistente para o painel do administrador; Suporte para arquivo install.php em temas. Antes que o tema seja ativado, o Bludit verifica se o arquivo install.php existe e o executa, isso ajuda para temas que precisam ativar plugins ou fazer algo após ativá-los; Plugin sitemap atualizado, novos URLs de ping para Google e Bing; Permite que páginas estáticas tenham subpáginas; Mostra páginas estáticas em ordem por posição o tempo todo em Admin-&gt;Conteúdo-&gt;Estático; Nova função para API a fim de obter usuários e definir configurações; Atualização do feed RSS com as recomendações W3C.</li>
+				</ul>	
 			<div>
 				
+				...
+<!--			
+
 			<div class="y">			
 				<h4>2020</h4>
 				<ul>
