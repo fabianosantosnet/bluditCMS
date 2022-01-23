@@ -24,7 +24,7 @@
 	
   <meta property="article:author" content="fabianosantosnet">
   <meta property="article:published_time" content="2020-11-15">
-  <meta property="article:modified_time" content="2021-11-09">
+  <meta property="article:modified_time" content="2022-01-23">
   <meta property="article:section" content="Artigos, Dicas, Novos recursos">
   <meta property="article:tag" content="segurança no bludit, CMS com NGINX">
 	
@@ -39,6 +39,7 @@
 
   </head>
   <body>
+	  
 <div class="parent">
 	<div class="top">
 	      <header>
@@ -132,6 +133,25 @@
 				<a href="http://encurtador.com.br/nqvzI">configurações do PHP.INI</a> e
 				<a href="http://encurtador.com.br/flosS">ocultar cabeçalhos HTTP</a>.
 			</p>
+			
+			<h3 id="art3">BLOG ou SITE ?</h3>
+			<p>De maneira geral um site seria um modo mais formal de organização das idéais, isto é, mais estruturado, e se destaca por ter um cunho mais sério, como por exemplo, um site de uma empresa.</p>
+			
+			<p>Já o blog, abreviação de blogger ou web blogger, refere-se a publicação de conteúdos de cunho mais geral e mais pessoal, caracterizado mais como um diário.</p>
+			
+			<p>No BLUDIT você pode criar tanto um site quanto um blog ou mesmo os dois. Bastando efetuar ajustes nas configurações e temas.</p>
+			
+			<p>Blog: por padrão o Bludit está configurado como blog <code>Ajustes-&gt;Geral-&gt;Configurações-&gt;Avançado</code> na seção Conteúdo em 'Ordenar conteúdo por', o padrão é Data (artigos mais recentes aparecerão no topo).O tipo de conteúdo indicado ao publicar é o padrão - Páginas.</p>
+			<p>Site: para alterar para site vá em <code>Ajustes-&gt;Geral-&gt;Configurações-&gt;Avançado</code> e altere 'Ordenar conteúdo por' para 'Posição' (nesse caso conteúdo recente aparecerá por último). O tipo de conteúdo indicado ao publicar é o  Estático.</p>
+			
+			<p>Pode ser que você tenha realizado a alteração e não tenha o resultado que espera como a mudança radical em um tema, nesse caso você poderia criar uma página estática de seu modo e colocá-la como principal. Ainda em <code>Configurações-&gt;Avançado</code> na seção 'Páginas pré-definidas'-&gt;'Página inicial', digite o nome da nova página, como resultado, no fim da página, na seção 'Filtros de URL' irá aparece ativo '/blog'. Isso para o caso de você ter uma página principal com um conteúdo diferenciado e no menu um link para a seção /blog de seu site.</p>
+			
+			<h3 id="art4">Qual editor usar?</h3>
+			<p>Por padrão o Bludit possui dois editores: EasyMDE para quem prefere editar o código e utilizar o MarkDown, e o TinyMCE que é o padrão voltado mais para aqueles que prefiram um editor mais rico, isto é mais visual.</p>
+			<p>Caso não precise de nenhum editor e prefira usar apenas o HTML, os dois podem ser desabilitados.</p>			
+			
+			<p>Por possuir um gerenciador de arquivos embutido, a melhor escolha é o plugin TinyMCEfileman. Caso possua uma instalação em uma subpasta, por exemplo <code>seuSite.com/bludit</code> quando incluir um arquivo na página irá aparecer o endereço sem essa subpasta, portanto quando incluir uma imagem, edite o código e inclua a subpasta, nesse exemplo '/bludit'. Por padrão os arquivos são carregados dentro de /bl-content/uploads. Suporta arquivos de audio, video, pdf e imagens.</p>
+				
 	      </section>
 		</div>
 
