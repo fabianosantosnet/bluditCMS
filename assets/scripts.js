@@ -114,4 +114,10 @@ window.onload=function(){
 			'<li><a href="./themes.html" title="Temas do Bludit"><i class="fas fa-link"></i> Temas</a></li>'+	
 			'<li><a href="./articles.html" title="Artigos do Bludit"><i class="fas fa-link"></i> Artigos</a></li>'+	
 		'</ul>';
+	
+  (function() {
+    var u="//microanalytics.io/js/script.js";    
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u; g.id="ZwSg9rf6GA"; s.parentNode.insertBefore(g,s);
+  })();
 }
