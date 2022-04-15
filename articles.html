@@ -151,7 +151,28 @@
 			<p>Caso não precise de nenhum editor e prefira usar apenas o HTML, os dois podem ser desabilitados.</p>			
 			
 			<p>Por possuir um gerenciador de arquivos embutido, a melhor escolha é o plugin TinyMCEfileman. Caso possua uma instalação em uma subpasta, por exemplo <code>seuSite.com/bludit</code> quando incluir um arquivo na página irá aparecer o endereço sem essa subpasta, portanto quando incluir uma imagem, edite o código e inclua a subpasta, nesse exemplo '/bludit'. Por padrão os arquivos são carregados dentro de /bl-content/uploads. Suporta arquivos de audio, video, pdf e imagens.</p>
-				
+			
+			<h3 id="art5">Fontes Web</h3>
+			<p>Você pode incluir uma fonte personalizada em seu site utilizando repositórios de terceiros ou fazendo download e disponibilizando localmente em sua hospedagem.</p>
+			<p>Os formatos recomendados hoje são woff2 e woff (como fallback), ao incluir via @font-face como no exemplo abaixo, deixe apenas essas duas versões.</p>
+			
+				<pre><code> @font-face 
+ {
+   font-family:"fontName"; 
+   src: url("//url.com/font.woff2") format("woff2"), 
+        url("//url.com/font.woff") format("woff");
+ }</code></pre>
+			
+			<p>Selecionei alguns sites para download ou baixar as fontes.</p>
+			<ul>
+				<li><a href="https://www.onlinewebfonts.com/fonts">OnlineWebFonts</a> - Possui uma vasta gama de fontes e estilos, você pode baixar ou utilizar o link do próprio site.</li><br>
+				<li><a href="https://fonts.google.com">Google Fonts</a> - Apesar de ser o mais conhecido, dependo do local que você esteja, o domínio do google pode ser bloqueado, nesse caso a melhor escolha seria fazer download das fontes ou hospedá-las no github.</li><br>
+				<li><a href="https://www.fontspace.com/">FontSpace</a> - Possui mais de 91 mil fontes gratuitas para download.</li><br>
+				<li><a href="https://www.1001fonts.com">1001 Fonts</a> - Fontes em formatos .ttf e .otf apenas para download.</li><br>
+				<li><a href="https://www.fontsquirrel.com/">Font Squirrel</a> - Diversas fontes gratuitas inclusive para uso comercial. Para ser utilizada em seu site deve ter o simbolo do globo (leia o faq).</li>
+			</ul>
+			
+			<p>Pode ter momentos que você queira saber qual a fonte de uma imagem, então faça o upload em <a href="https://www.whatfontis.com/">What Font Is</a>.</p>
 	      </section>
 		</div>
 
