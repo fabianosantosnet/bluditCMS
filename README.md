@@ -19,6 +19,6 @@ Suporta Markdown e HTML, além disso possui editor Markdown e WYSIWYG.
 ## Por que da escolha?
 CMS (gerenciamento de conteúdo) bom, com possibilidade de expansão, e altamente customizável. O usuário pode baixá-lo, instalá-lo e depois personalizá-lo, necessitando apenas de um tempo para [aprender como funciona](https://docs.bludit.com/) . Esse projeto irá ajudá-lo a entender o funcionamento.
 
-Veja mais detalhes no [site](https://fabianosantosnet.github.io/bluditCMS/). Caso tenha interesse em ajudar [aceito doações](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Z3EAJK47GMXCU&currency_code=BRL&source=url).
+Veja mais detalhes no [site](https://fabianosantosnet.github.io/bluditCMS/). Caso tenha interesse em ajudar [aceito doações](https://git.fabianosantos.net/doar).
 
 
